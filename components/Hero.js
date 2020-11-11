@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
             <div className='heroCTAContainer'>
                 <div>
-                    <Link href={'/selection-du-jour'}>
+                    <Link href={'plats-du-jour'}>
                         <a className='heroCTA'> Découvrir nos plats du jour</a>
                     </Link>
                 </div>
