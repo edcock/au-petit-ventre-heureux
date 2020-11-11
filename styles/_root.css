@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,600;1,800&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --dark-gray: #383838;
+    --gray: rgba(56, 56, 56, 0.5);
+    --lightgray: #525352;
+    --green: #C2CD2F;
+    --beige: #EEE5D2;
+    --red: #910202;
+    --font-size-headline: 6.9708rem;
+    --font-size-subheadline: 5.809rem;
+    --font-size-1: 3.4854rem; /* 48px */
+    --font-size-2: 2.61405rem; /* 36px */
+    --font-size-3: 1.597475rem; /* 30px */
+    --font-size-4: 1.45225rem; /* 26px */
+    --font-size-5: 1.1618rem; /* 18px */
+    --font-size-6: 1rem; /* 16px */
+    --font-size-7: 0.875rem; /* 14px */
+    --font-size-8: 0.75rem; /* 12px */
+    --font-weight-blacker: 800;
+    --font-weight-title: 600;
+    --font-weight-normal: 300;
+    --font-weight-light: 100;
+    --font-blacker: "Open Sans", "Helvetica", sans-serif;
+    --font-sans-serif-text: 'Open Sans', helvetica, sans-serif;
+    --font--helvetica-text: Helvetica, Arial, sans-serif;;
+    --font-helvetica-text-medium: "HelveticaNowTextMedium", "Helvetica", sans-serif;
+    --font-helvetica-text-light: "HelveticaNowTextLight", "Helvetica", sans-serif;
+    --font-helvetica-display: "HelveticaNowDisplay", "Helvetica", sans-serif;
+    --font-helvetica-text-regular: "HelveticaNowTextRegular", "Helvetica", sans-serif;
+
+    --letter-spacing-tight: -.05em;
+    --letter-spacing-1: .1em;
+    --letter-spacing-2: .25em;
+
+    --line-height-solid: 1;
+    --line-height-title: 1.25;
+    --line-height-copy: 1.5;
+
+    --spacing-extra-small: 0.25rem;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --spacing-extra-large: 4rem;
+    --spacing-extra-extra-large: 8rem;
+    --spacing-extra-extra-extra-large: 16rem;
+
+    --red-000: #320d15;
+    --red-100: #541524;
+    --red-200: #781e33;
+    --red-300: #9e2843;
+    --red-400: #b14960;
+    --red-500: #be697c;
+    --red-600: #cb8797;
+    --red-700: #d8a5b1;
+    --red-800: #e5c3cb;
+    --red-900: #f2e1e5;
+    --gold-000: #1b1a17;
+    --gold-100: #2e2c29;
+    --gold-200: #43403b;
+    --gold-300: #59554e;
+    --gold-400: #6f6b62;
+    --gold-500: #878277;
+    --gold-600: #a09a8d;
+    --gold-700: #b9b2a3;
+    --gold-800: #d3cbba;
+    --gold-900: #ede4d1;
+    --green-000: #1a1b06;
+    --green-100: #2c2f0b;
+    --green-200: #40430f;
+    --green-300: #555a15;
+    --green-400: #6a711a;
+    --green-500: #81881f;
+    --green-600: #98a125;
+    --green-700: #b0ba2b;
+    --green-800: #cad44a;
+    --green-900: #e5eaa7;
+    --blue-000: #071c29;
+    --blue-100: #0b2f46;
+    --blue-200: #104465;
+    --blue-300: #155a85;
+    --blue-400: #1b71a7;
+    --blue-500: #2189ca;
+    --blue-600: #48a2db;
+    --blue-700: #77bae4;
+    --blue-800: #a5d1ed;
+    --blue-900: #d2e8f6;
+    --gray-900: #1a1a1a;
+    --gray-800: #2c2c2c;
+    --gray-700: #404040;
+    --gray-600: #565656;
+    --gray-500: #6c6c6c;
+    --gray-400: #828282;
+    --gray-300: #9a9a9a;
+    --gray-200: #b2b2b2;
+    --gray-100: #cbcbcb;
+    --gray-000: #e5e5e5;
+}
+
+
+/* -ns */
+@media screen and (min-width: 375px) {
+
+}
+
+/* mobile -> portrait Tablet */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+}
+
+/* tablet -> desktop  */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+
+}
+
+/*  big screens */
+@media screen and (min-width: 2560px) {
+}

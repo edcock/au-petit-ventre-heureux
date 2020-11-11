@@ -1,30 +1,85 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import Image from "next/image";
+import React from "react";
 
 export default function Footer() {
-  return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/zeit/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </Container>
-    </footer>
-  )
+    return (
+        <footer>
+            <div className='footerSectionContainer'>
+                <div className={'footerInformationContainer'}>
+                    <div className={'footerInformation'}>
+                        <h3 className='footerTitle'>Contact:</h3>
+                        <ul className={'contactInfoList'}>
+                            <li className='contactInfo'>
+                                <Image src={'/images/call.svg'} width={20} height={20}/>
+                                <span className='ph3'>06 16 32 50 23</span>
+                            </li>
+                            <li className={'contactInfo'}>
+                                <Image src={'/images/call.svg'} width={20} height={20}/>
+                                <span className='ph3'>05 47 27 40 47</span>
+                            </li>
+                            <li className='contactInfo'>
+                                <Image src={'/images/address.svg'} width={20} height={20}/>
+                                <span className='ph3'> 34 rue de la Republique 24200 SARLAT</span>
+                            </li>
+                            <li className={'contactInfo'}>
+                                <Image src={'/images/envelop.svg'} width={20} height={20}/>
+                                <span className='ph3'>www.aupetitventreheureux.fr</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={'footerInformation'}>
+                        <h3 className='footerTitle'>Horaire:</h3>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td className="timetableElement">Lundi</td>
+                                <td className="timetableElement">09:00-18h00</td>
+                            </tr>
+                            <tr>
+                                <td className="timetableElement">Mardi</td>
+                                <td className="timetableElement">09:00-18h00</td>
+                            </tr>
+                            <tr>
+                                <td className="timetableElement">Mercredi</td>
+                                <td className="timetableElement">09:00-18h00</td>
+                            </tr>
+                            <tr>
+                                <td className="timetableElement">Jeudi</td>
+                                <td className="timetableElement">Fermé</td>
+                            </tr>
+                            <tr>
+                                <td className="timetableElement">Vendredi</td>
+                                <td className="timetableElement">09:00-18h00</td>
+                            </tr>
+                            <tr>
+                                <td className="timetableElement">Samedi</td>
+                                <td className="timetableElement">09:00-18h00</td>
+                            </tr>
+                            <tr>
+                                <td className="timetableElement">Dimanche</td>
+                                <td className="timetableElement">09:00-18h00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className={'footerInformation'}>
+                        <h3 className='footerTitle'>Paiements acceptés:</h3>
+                        <div className={'payments'}>
+                            <div className="paymentIcon"><Image src={'/images/visa.svg'} width={100} height={100}/>
+                            </div>
+                            <div className="paymentIcon"><Image src={'/images/mastercard.svg'} width={100}
+                                                                height={100}/></div>
+                            <div className="paymentIcon"><Image src={'/images/ticket-restaurant.png'} width={100}
+                                                                height={100}/></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p className={'footerPhrase'}>
+                        Pour tous évènements les commandes se prennent 48h à l’avance
+                    </p>
+                </div>
+            </div>
+        </footer>
+    )
 }

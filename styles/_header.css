@@ -1,0 +1,80 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vh;
+}
+
+.headerLogoContainer {
+    max-width: 3rem;
+}
+
+.headerMobileNavLinksContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    max-width: 40vw;
+}
+
+.headerMobileNavLink {
+    margin: 0;
+    display: flex
+}
+
+.headerMobileNavLink .active {
+    display: none;
+}
+
+.headerNavLinksContainer {
+    display: none;
+}
+
+.headerNavLink:hover {
+    color: var(--dark-gray);
+}
+
+.headerMobileIcon {
+    padding: 2vw;
+    margin: 1rem
+}
+
+/* -ns */
+@media screen and (min-width: 50em) {.headerNavLink {
+        padding-left: 2vw;
+        color: var(--gray);
+        text-decoration: none;
+        font-size: var(--font-size-5);
+    }
+
+    .headerNavLinksContainer {
+        display: block;
+    }
+
+    .headerMobileNavLinksContainer {
+        display: none;
+    }
+    .headerLogoContainer {
+        max-width: 8rem;
+    }
+
+}
+
+/* mobile -> portrait Tablet */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    .headerNavLink {
+        font-size: var(--font-size-5);
+    }
+}
+
+/* tablet -> desktop  */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+}
+
+/*  big screens */
+@media screen and (min-width: 2560px) {
+}

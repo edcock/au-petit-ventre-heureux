@@ -1,0 +1,139 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.heroTitle {
+    font-weight: var(--font-weight-title);
+    font-family: var(--font-sans-serif-text);
+    font-size: var(--font-size-7);
+}
+
+.a-emporter {
+    color: var(--green);
+    font-style: italic;
+    display: inline-block;
+}
+
+.heroSubtitle {
+    font-family: var(--font-sans-serif-text);
+    font-size: var(--font-size-7);
+    font-weight: var(--font-weight-normal);
+}
+
+.mobileHeroPicture {
+    display: block;
+}
+
+.heroCTAContainer {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.heroCTA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border: 5px solid var(--green);
+    padding: 1rem;
+    text-align: center;
+    font-size: var(--font-size-4);
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+/* -ns */
+@media screen and (min-width: 50em) {
+    .heroContainer {
+        display: flex;
+        flex-direction: row;
+        margin: 15vh 0;
+        height: 70vh;
+        position: relative;
+        background: url("/images/hero.jpg");
+        background-size: cover;
+    }
+
+    .mobileHeroPicture {
+        display: none;
+    }
+
+    .heroTitleContainer {
+        z-index: 1;
+        background-color: var(--white);
+        font-size: 20px;
+        margin-left: 10%;
+        padding: 1.43rem 3vw;
+        position: absolute;
+        top: -5rem;
+        width: 50%;
+    }
+
+    .heroTitle {
+        font-size: var(--font-size-3);
+        line-height: var(--font-size-3);
+        padding-left: 1.43rem;
+    }
+
+    .heroSubtitle {
+        font-size: var(--font-size-4);
+        padding-left: 1.43rem;
+        font-family: var(--font--helvetica-text);
+        font-weight: 100;
+    }
+
+    .heroImageContainer {
+        /*position: relative;*/
+    }
+
+    .a-emporter {
+        display: inline-block;
+    }
+
+    .heroCTAContainer {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .heroCTA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        border-radius: 100%;
+        border: 5px solid var(--green);
+        padding: 5rem;
+        text-align: center;
+        font-size: var(--font-size-3);
+        height: 15rem;
+        width: 15rem;
+        margin-right: -3rem;
+        color: var(--dark-gray);
+        text-decoration: none;
+    }
+
+}
+
+/* mobile -> portrait Tablet */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+}
+
+/* tablet -> desktop  */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+}
+
+/*  big screens */
+@media screen and (min-width: 2560px) {
+}

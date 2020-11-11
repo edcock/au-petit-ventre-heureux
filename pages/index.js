@@ -1,43 +1,34 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/api'
+import {getAllPostsForHome} from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import Hero from "../components/Hero";
+import Presentation from "../components/Presentation";
+import Image from "next/image";
+import Testimonials from "../components/Testimonials";
 
-export default function Index({ allPosts }) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
-  return (
-    <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  )
+export default function Index({allPosts}) {
+    const heroPost = allPosts[0]
+    const morePosts = allPosts.slice(1)
+    return (
+        <>
+            <Layout>
+                <Head>
+                    <title>Au Petit Ventre Heureux</title>
+                </Head>
+                <Hero/>
+                <Presentation/>
+                <div className='mt7'>
+                    <Image src={'/images/bistrot.jpg'} width={1258} height={770} layout={'responsive'}/>
+                </div>
+                <Testimonials/>
+            </Layout>
+        </>
+    )
 }
 
-export async function getStaticProps({ preview }) {
-  const allPosts = await getAllPostsForHome(preview)
-  return {
-    props: { allPosts },
-  }
+export async function getStaticProps({preview}) {
+    const allPosts = await getAllPostsForHome(preview)
+    return {
+        props: {allPosts},
+    }
 }

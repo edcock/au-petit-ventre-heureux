@@ -1,0 +1,35 @@
+.producerTitle {
+    font-size: var(--font-size-2);
+}
+
+.producerDescription {
+    font-size: var(--font-size-4);
+}
+
+@media screen and (min-width: 50em) {
+    .producerTitle {
+        font-size: var(--font-size-2);
+    }
+
+    .producerDescription {
+        font-size: var(--font-size-5);
+    }
+}
+
+/* mobile -> portrait Tablet */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+}
+
+/* tablet -> desktop  */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+
+}
+
+/*  big screens */
+@media screen and (min-width: 2560px) {
+}
