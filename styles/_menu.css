@@ -3,7 +3,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 75vh;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
 }
 
 .menu {

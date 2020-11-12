@@ -21,14 +21,14 @@ export default () => {
                     return (
                         <div className="daily-container flex flex-column flex-row-ns items-center">
                             <div
-                                className={`w-100 w-60-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" + " order-2-ns"} order-1`}>
+                                className={`w-100 pl4-ns pr3-ns w-60-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" + " order-2-ns"} order-1`}>
                                 <h1 className="daily-dish-title">{producer.title}</h1>
                                 <p className="daily-description">
                                     {producer.description}
                                 </p>
                             </div>
                             <div
-                                className={`${index % 2 === 0 ? "order-1-ns" : "order-2-ns flex justify-end"} order-2 mb3 mb0-ns w-90 w-50-ns`}>
+                                className={`${index % 2 === 0 ? "order-1-ns" : "order-2-ns flex justify-end"} order-2 mb3 mb0-ns w-90 w-40-ns`}>
                                 <Image src={producer.img} width={541} height={361} alt={producer.title}/>
                             </div>
                         </div>
