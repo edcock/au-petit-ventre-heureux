@@ -13,14 +13,14 @@ export default () => {
             center={[1.216038, 44.888763]}
             zoom={[17]}
             containerStyle={{
-                height: "50vh",
+                height: "400px",
                 width: "100%"
             }}
         >
             <Marker
                 coordinates={[1.216038, 44.888763]}
                 anchor="bottom">
-                <Image src={'/images/address.svg'} width={30} height={30}/>
+                <img src={'/images/pin.svg'} width={30} height={30} alt='pin'/>
             </Marker>
             <ZoomControl/>
         </MapBox>

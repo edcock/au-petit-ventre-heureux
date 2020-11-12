@@ -1,10 +1,8 @@
 import Layout from "../components/layout";
 import Image from "next/image";
 import {useForm} from "react-hook-form";
-import React, {useState} from 'react';
+import React from 'react';
 import dynamic from "next/dynamic";
-
-import ReactMapGL from 'react-map-gl';
 
 const MapwithNoSSR = dynamic(() => import("../components/Map"), {
     ssr: false
@@ -14,7 +12,6 @@ const Contact = () => {
     const onSubmit = data => console.log(data);
     return (
         <Layout>
-
             <section className="contact-hero-container">
 
                 <div className="contact-hero-title-container">
@@ -24,30 +21,30 @@ const Contact = () => {
                     </h4>
                 </div>
                 <div className='contact-mobile-hero-map'>
-                    <MapwithNoSSR />
+                    <MapwithNoSSR/>
                 </div>
-                <Image src={'/images/facade.jpg'} width={1264} height={668}/>
             </section>
+                <Image src={'/images/facade.jpg'} width={1264} height={668}/>
             <div className='flex flex-row-ns flex-column justify-between'>
                 <div className='contact-contact-container'>
                     <div className='footerInformation'>
                         <h3 className='footerTitle'>Contact:</h3>
                         <ul className='contactInfoList'>
                             <li className='contactInfo'>
-                                <Image src={'/images/call.svg'} width={20} height={20}/>
+                                <Image src={'/images/green-icons/call.svg'} width={20} height={20}/>
                                 <span className='ph3 '>06 16 32 50 23</span>
                             </li>
                             <li className='contactInfo'>
-                                <Image src={'/images/call.svg'} width={20} height={20}/>
+                                <Image src={'/images/green-icons/call.svg'} width={20} height={20}/>
                                 <span className='ph3'>05 47 27 40 47</span>
                             </li>
                             <li className={'contactInfo'}>
-                                <Image src={'/images/address.svg'} width={20} height={20}/>
-                                <span className='ph3'> 34 rue de la Republique 24200 SARLAT</span>
+                                <Image src={'/images/green-icons/address.svg'} width={20} height={20}/>
+                                <span className='ph3'> 34 rue de la Republique <br/>24200 SARLAT</span>
                             </li>
                             <li className={'contactInfo'}>
                                 <Image src={'/images/envelop.svg'} width={20} height={20}/>
-                                <span className='ph3'>www.aupetitventreheureux.fr</span>
+                                <span className='ph3'>bonjour@aupetitventreheureux.fr</span>
                             </li>
                         </ul>
                     </div>
@@ -91,7 +88,7 @@ const Contact = () => {
                             {errors.agree &&
                             <span className='input-error'>Ce renseignement est primoridal pour vous recontacter.</span>}
                         </div>
-                        <input type="submit" className="green-cta"/>
+                        <input type="submit" className="green-cta" value={"Envoyer"}/>
 
                     </form>
                 </div>

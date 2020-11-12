@@ -42,7 +42,7 @@
 }
 
 .form-intro {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-5);
     color: var(--dark-gray);
     font-weight: var(--font-weight-title);
     line-height: var(--line-height-title);
@@ -79,14 +79,17 @@
 }
 
 .form-disclaimer {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-7);
 }
 
 .label-disclaimer {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-7);
     padding-left: 1rem;
 }
 
+input[type = checkbox] {
+    padding: 1rem;
+}
 
 @media screen and (min-width: 50em) {
     .contact-hero-container {
@@ -102,5 +105,12 @@
     .form-container {
         max-width: 52vw;
         padding-bottom: 2rem;
+    }
+
+    .form-intro {
+        font-size: var(--font-size-3);
+        color: var(--dark-gray);
+        font-weight: var(--font-weight-title);
+        line-height: var(--line-height-title);
     }
 }

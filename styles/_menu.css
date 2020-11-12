@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 90vh;
-    padding: 1rem 0;
+    min-height: 75vh;
+    margin-bottom: 5vh;
 }
 
 .menu {
-    width: 90vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -15,7 +15,7 @@
     border-bottom: 2px solid var(--green);
 }
 
-.menu > h3 {
+.menu-list > h3 {
     font-size: var(--font-size-5);
     font-weight: var(--font-weight-title);
     font-family: var(--font-sans-serif-text);
@@ -23,13 +23,13 @@
     font-style: italic;
 }
 
-.menu > ul {
+.menu-list > ul {
     padding: 0;
     list-style: none;
 }
 
-.menu > ul > li {
-    font-size: var(--font-size-7);
+.menu-list > ul > li {
+    font-size: var(--font-size-5);
     margin: 1rem 0
 }
 
@@ -48,12 +48,11 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 1rem 0;
     }
 
     .menu {
         width: 30vw;
-        margin: 0 5vw 0 5vw;
+        margin: 0 5vw 0 10vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -62,15 +61,16 @@
         border-bottom: none;
     }
 
-    .menu > h3 {
+    .menu-list > h3 {
         font-size: var(--font-size-2);
+        margin-top: 1rem;
     }
 
-    .menu > ul > li {
+    .menu-list > ul > li {
         font-size: var(--font-size-4);
     }
 
-    .menu > ul > li:first-letter {
+    .menu-list > ul > li:first-letter {
         text-transform: capitalize;
         font-weight: var(--font-weight-title);
         font-style: italic;

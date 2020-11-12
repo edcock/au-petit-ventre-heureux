@@ -10,14 +10,18 @@ export default () => {
         title: "Notre viande",
         description: "Nous collaborons avec un fournisseur local. Il partage nos valeurs de respect, de qualité et d’authenticité. Nous le connaissons bien. Nous le rencontrons et les visitons régulièrement parce que nous sommes convaincus que la relation humaine et la confiance qui nous unissent sont indispensables.",
         img: "/images/eleveur.jpg"
+    },{
+        title: "Notre pain",
+        description: "Nous collaborons avec un fournisseur local. Il partage nos valeurs de respect, de qualité et d’authenticité. Nous le connaissons bien. Nous le rencontrons et les visitons régulièrement parce que nous sommes convaincus que la relation humaine et la confiance qui nous unissent sont indispensables.",
+        img: "/images/pain.jpg"
     },
     ]
     return (
         <Layout>
-            <article className="pv4 ph3 ph0-l">
+            <article className="pv4 ph3 ph0-l min-vh-100">
                 {producers.map((producer, index) => {
                     return (
-                        <div key={index} className="flex flex-column flex-row-ns items-center">
+                        <div key={index} className="flex flex-column flex-row-ns items-center mv3">
                             <div
                                 className={`w-100 w-60-ns pl4-ns pr3-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" +
                                     " order-2-ns"} order-1`}>
@@ -27,7 +31,7 @@ export default () => {
                                 </p>
                             </div>
                             <div
-                                className={`pl3-ns ${index % 2 === 0 ? "order-1-ns" : "order-2-ns flex justify-end"} order-2 mb4 mb0-ns w-100 w-40-ns`}>
+                                className={`${index % 2 === 0 ? "order-1-ns" : "order-2-ns flex justify-end"} order-2 mb4 mb0-ns w-100 w-40-ns`}>
                                 <Image src={producer.img} width={541} height={361} alt={producer.title}/>
                             </div>
                         </div>

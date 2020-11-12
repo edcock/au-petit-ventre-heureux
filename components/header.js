@@ -18,7 +18,7 @@ const Header = () => {
                 <div className="headerLogoContainer">
                     <Link href={"/"}>
                         <a>
-                            <Image src={'/images/logo.svg'} width={120} height={120}/>
+                            <Image src={'/images/logo.svg'} width={240} height={240}/>
                         </a>
                     </Link>
                 </div>

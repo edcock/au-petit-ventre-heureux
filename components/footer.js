@@ -23,7 +23,7 @@ export default function Footer() {
                             </li>
                             <li className={'contactInfo'}>
                                 <Image src={'/images/green-icons/envelop.svg'} width={20} height={20}/>
-                                <span className='ph3'>www.aupetitventreheureux.fr</span>
+                                <span className='ph3'>bonjour@aupetitventreheureux.fr</span>
                             </li>
                         </ul>
                     </div>

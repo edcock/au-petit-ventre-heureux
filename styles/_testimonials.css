@@ -17,6 +17,7 @@
 .testimonialsContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .testimonial {
@@ -33,10 +34,11 @@
 
     .testimonialsContainer {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .testimonial {
-        font-size: var(--font-size-5);
+        font-size: var(--font-size-4);
+        text-align: center;
     }
 }

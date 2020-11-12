@@ -2,18 +2,16 @@ const Testimonials = () => {
     return (
         <div className='testimonialsSectionContainer'>
             <h2 className='testimonialsSectionTitle'>
-                Ils parlent nous
+                Ils parlent de nous
             </h2>
             <div className='testimonialsContainer'>
                 <p className='testimonial'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet non nec sapien, libero nam. In eros
-                    leo venenatis interdum in amet. Laoreet mi, adipiscing accumsan ligula purus. Id netus quisque at
-                    magnis posuere luctus.
+                    Une cuisine traditionnelle et de qualité régulière de très bon niveau.
+                    Service excellent. <br/>Une adresse que je recommande sans réserve.
                 </p>
                 <p className='testimonial'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet non nec sapien, libero nam. In eros
-                    leo venenatis interdum in amet. Laoreet mi, adipiscing accumsan ligula purus. Id netus quisque at
-                    magnis posuere luctus.
+                    Gourmand rapide et trés bon ! <br/>
+                    Bon compromis pour un déjeuner sur le pouce en terrasse ou à emporter.
                 </p>
             </div>
         </div>

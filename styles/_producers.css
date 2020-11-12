@@ -1,5 +1,7 @@
 .producerTitle {
     font-size: var(--font-size-5);
+    font-weight: var(--font-weight-title);
+    letter-spacing: -0.05rem;
 }
 
 .producerDescription {

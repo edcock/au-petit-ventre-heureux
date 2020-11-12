@@ -1,13 +1,14 @@
 .green-cta {
     font-size: var(--font-size-4);
     text-decoration: none;
-    background-color: var(--green-900);
-    color: var(--dark-gray);
+    background-color: var(--green);
+    color: var(--white);
     padding: 14px 86px;
     border: 1px solid var(--green);
+    font-weight: var(--font-weight-title);
 }
-
+.green-cta:active,
 .green-cta:hover {
-    background-color: var(--green);
-    color: var(--dark-gray);
+    background-color: var(--green-800);
+    color: var(--white);
 }
