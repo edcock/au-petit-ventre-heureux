@@ -17,7 +17,7 @@ export default () => {
             <article className="pv4 ph3 ph0-l">
                 {producers.map((producer, index) => {
                     return (
-                        <div className="flex flex-column flex-row-ns items-center">
+                        <div key={index} className="flex flex-column flex-row-ns items-center">
                             <div
                                 className={`w-100 w-60-ns pl4-ns pr3-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" +
                                     " order-2-ns"} order-1`}>

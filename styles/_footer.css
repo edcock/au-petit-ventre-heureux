@@ -4,25 +4,31 @@
     flex-direction: column;
     margin-bottom: 5vh;
     color: var(--lightgray);
+    padding: 0 0 2vh 0;
 }
 
 .footerInformationContainer {
     display: flex;
     flex-direction: column;
     background-color: var(--beige);
-    padding: 3vh 5vw;
+    padding: 1vh 5vw 0;
 }
 
 .footerTitle {
     font-weight: var(--font-weight-title);
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-4);
     color: var(--gray-700);
+    margin: 0.5rem 0 0.75rem;
 }
 
 .footerInformation {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+}
+
+.footerInformation:nth-child(2) {
+    padding-bottom: 2rem;
 }
 
 .contactInfoList {
@@ -35,43 +41,71 @@
     margin: 0;
     display: flex;
     align-content: center;
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-6);
     padding-bottom: 2rem;
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+.contactInfo > span {
+    text-decoration: none;
+    color: var(--dark-gray);
 }
 
 .timetableElement {
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-6);
     padding-right: 1rem;
 }
 
 .payments {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .paymentIcon {
-    padding: 1rem;
+    padding: 0 1rem 0 0;
 }
 
 .footerPhrase {
     text-align: center;
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-7);
+    padding: 0 1rem;
 }
 
 /* -ns */
 @media screen and (min-width: 50em) {
+
     .footerInformationContainer {
         display: flex;
         flex-direction: row;
+        padding: 1vh 1vw 0;
+        justify-content: space-between;
+
     }
 
-    .contactInfo {
-        font-size: var(--font-size-4);
+    .footerTitle {
+        font-size: var(--font-size-3);
     }
 
+    .footerPhrase,
+    .contactInfo,
     .timetableElement {
         font-size: var(--font-size-4);
+    }
+
+    .payments {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footerPhrase {
+        text-align: center;
+    }
+
+    .footerInformation {
+        flex-grow: 0;
     }
 }
 

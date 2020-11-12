@@ -4,6 +4,14 @@ import Link from "next/link";
 
 
 const Header = () => {
+
+    let links = [
+        {value: "Plats du jour", relativePath: "/plats-du-jour"},
+        {value: "Notre carte", relativePath: "/notre-carte"},
+        {value: "Nos producteurs", relativePath: "/nos-producteurs"},
+        {value: "Contact", relativePath: "/contact"},
+    ]
+
     return (
         <>
             <div className="headerContainer">
@@ -16,28 +24,99 @@ const Header = () => {
                 </div>
                 <>
                     <div className="headerNavLinksContainer">
-                        <Link href={'/plats-du-jour'}><a className="headerNavLink">Plats du jour</a></Link>
-                        <Link href={'/notre-carte'}><a className='headerNavLink'>Notre carte</a></Link>
-                        <Link href={'/nos-producteurs'}><a className="headerNavLink"> Nos producteurs</a></Link>
-                        <Link href={'/contact'}><a className="headerNavLink"> Contact</a></Link>
+                        {
+                            links.map((link, index) => {
+                                return <Link href={link.relativePath} key={index}><a
+                                    className="headerNavLink">{link.value}</a></Link>
+                            })
+                        }
                     </div>
                     <div className="headerMobileNavLinksContainer">
-                        <a href='tel:0616325023' className='headerMobileNavLink'>
+                        <a href='tel:0616325023' className='headerMobileNavLink z-5'>
                             <Image src={'/images/call.svg'} width={17} height={18}/>
                         </a>
-                        <div id="openingHoursModal" className='headerMobileNavLink'>
-                            <Image src={'/images/time.svg'} width={17} height={18}/>
+                        <div id="openingHoursModal" className='headerMobileNavLink z-5'>
+                            <div className="openingHoursModal active" onClick={() => {
+                                document.querySelector('.openingHoursModal.active').style.display = "none"
+                                document.querySelector('.openingHoursModal.disable').style.display = "flex"
+                            }}>
+                                <Image src={'/images/cross.svg'} width={18} height={18}/>
+                                <div className='bg-white z-1 pa3 ba'>
+                                    <h3>Horaire:</h3>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td className="timetableElement">Lundi</td>
+                                            <td className="timetableElement">09:00-18h00</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="timetableElement">Mardi</td>
+                                            <td className="timetableElement">09:00-18h00</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="timetableElement">Mercredi</td>
+                                            <td className="timetableElement">09:00-18h00</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="timetableElement">Jeudi</td>
+                                            <td className="timetableElement">Fermé</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="timetableElement">Vendredi</td>
+                                            <td className="timetableElement">09:00-18h00</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="timetableElement">Samedi</td>
+                                            <td className="timetableElement">09:00-18h00</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="timetableElement">Dimanche</td>
+                                            <td className="timetableElement">09:00-18h00</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div className="openingHoursModal disable" onClick={() => {
+                                if (document.querySelector('.menu-mobile.active').style.display === "flex") {
+                                    document.querySelector(".menu-mobile.active").style.display = "none"
+                                    document.querySelector(".menu-mobile.disable").style.display = "flex"
+                                }
+                                document.querySelector(".openingHoursModal.active").style.display = "flex"
+                                document.querySelector(".openingHoursModal.disable").style.display = "none"
+                            }}>
+                                <Image src={'/images/time.svg'} width={18} height={18}/>
+                            </div>
                         </div>
-                        <div id="addressModal" className='headerMobileNavLink'>
+                        <div id="addressModal" className='headerMobileNavLink z-5'>
                             <Image src={'/images/address.svg'} width={17} height={18}/>
                         </div>
-                        <div id="menu" className={'headerMobileNavLink'}>
-                            <div className="active" onClick={() => {
+                        <div id="menu" className='headerMobileNavLink'>
+                            <div className="menu-mobile active" onClick={() => {
+                                if (document.querySelector('.openingHoursModal.active').style.display === "flex") {
+                                    document.querySelector(".openingHoursModal.active").style.display = "none"
+                                    document.querySelector(".openingHoursModal.disable").style.display = "flex"
+                                }
+                                document.querySelector('.menu-mobile.active').style.display = "none"
+                                document.querySelector('.menu-mobile.disable').style.display = "flex"
                             }}>
-                                <Image src={'/images/cross.svg'} width={17} height={18}/>
+                                <Image src={'/images/cross.svg'} width={18} height={18}/>
+                                <div className='headerNavLink-mobile-container'>
+                                    {links.map((link, index) => {
+                                        return <Link href={link.relativePath} key={index}><a
+                                            className="headerNavLink-mobile">{link.value}</a></Link>
+                                    })}
+                                </div>
                             </div>
-                            <div className="disable">
-                                <Image src={'/images/menu.svg'} width={17} height={18}/>
+                            <div className="menu-mobile disable" onClick={() => {
+                                if (document.querySelector('.openingHoursModal.active').style.display === "flex") {
+                                    document.querySelector(".openingHoursModal.active").style.display = "none"
+                                    document.querySelector(".openingHoursModal.disable").style.display = "flex"
+                                }
+                                document.querySelector('.menu-mobile.active').style.display = "flex"
+                                document.querySelector('.menu-mobile.disable').style.display = "none"
+                            }}>
+                                <Image src={'/images/menu.svg'} width={18} height={18}/>
                             </div>
                         </div>
                     </div>

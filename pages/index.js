@@ -17,7 +17,7 @@ export default function Index({allPosts}) {
                 </Head>
                 <Hero/>
                 <Presentation/>
-                <div className='mt7'>
+                <div className='mt7-ns'>
                     <Image src={'/images/bistrot.jpg'} width={1258} height={770} layout={'responsive'}/>
                 </div>
                 <Testimonials/>

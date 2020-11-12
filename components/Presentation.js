@@ -6,14 +6,16 @@ const Presentation = () => {
     return (
         <div id="qui-sommes-nous" className='presentationContainer'>
             <div className="presentationPictureContainer">
-                <div className={'presentationPicture'}>
+                <div className='presentationPicture '>
                     <Image src={'/images/facade.jpg'} height={408} width={708}/>
                 </div>
-                <div className={'presentationPicture'}>
+                <div className='presentationPicture'>
                     <Image src={'/images/planche.jpg'} height={634} width={428}/>
                 </div>
+                <div className='background-color-mobile'/>
             </div>
             <div className='presentationTextContainer'>
+                <div className='background-color-desktop'/>
                 <div className='presentationText'>
                     <h2 className='presentationTitle'> Pourquoi nous choisir ?</h2>
                     <p className='presentationBody'>

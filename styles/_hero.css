@@ -7,13 +7,17 @@
 .heroTitle {
     font-weight: var(--font-weight-title);
     font-family: var(--font-sans-serif-text);
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-5);
+    letter-spacing: -0.06rem;
+
 }
 
 .a-emporter {
     color: var(--green);
     font-style: italic;
     display: inline-block;
+    padding-left: 1rem ;
+    /*border-left: 1px solid black;*/
 }
 
 .heroSubtitle {
@@ -37,13 +41,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white);
+    background-color: var(--green);
     border: 5px solid var(--green);
     padding: 1rem;
     text-align: center;
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-blacker);
     text-decoration: none;
-    color: var(--dark-gray);
+    color: var(--white);
 }
 
 /* -ns */
@@ -83,7 +88,9 @@
         font-size: var(--font-size-4);
         padding-left: 1.43rem;
         font-family: var(--font--helvetica-text);
-        font-weight: 100;
+        text-decoration: none;
+        color: var(--dark-gray);
+        margin: 0;
     }
 
     .heroImageContainer {

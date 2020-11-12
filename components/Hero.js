@@ -9,20 +9,19 @@ const Hero = () => {
                     PLATS CUISINÉS - TRAITEUR <br/>RÔTISSERIE <br/>
                     RESTAURATION RAPIDE <span className='a-emporter'>À EMPORTER</span>
                 </h1>
-                <h4 className="heroSubtitle">
-                    Voir la carte -
+                <h4>
+                    <Link href={"/notre-carte"}>
+                        <a className="heroSubtitle">Voir la carte -</a>
+                    </Link>
                 </h4>
             </div>
-
             <div className='mobileHeroPicture'>
                 <Image src={'/images/hero.jpg'} width={1264} height={668}/>
             </div>
             <div className='heroCTAContainer'>
-                <div>
-                    <Link href={'plats-du-jour'}>
-                        <a className='heroCTA'> Découvrir nos plats du jour</a>
-                    </Link>
-                </div>
+                <Link href={'plats-du-jour'}>
+                    <a className='heroCTA'> Notre selection du jour </a>
+                </Link>
             </div>
         </section>
     )

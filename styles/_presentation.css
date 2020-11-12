@@ -1,7 +1,7 @@
 .presentationContainer {
     display: flex;
     flex-direction: column;
-    margin: 10vh 0;
+    margin: 5vh 0;
 }
 
 .presentationPictureContainer {
@@ -18,6 +18,24 @@
     border: 2px solid var(--white);
     border-radius: 6px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.presentationPicture:first-child {
+    order: 2;
+    align-self: flex-start;
+    max-width: 70%;
+}
+
+.presentationPicture:nth-child(2) {
+    max-width: 50%;
+    order: 1;
+}
+
+.background-color-mobile {
+    position: absolute;
+    background-color: var(--beige);
+    width: 16rem;
+    height: 16rem;
 }
 
 /*.presentationPicture:nth-child(1) {*/
@@ -37,8 +55,8 @@
 
 .presentationTitle {
     font-family: var(--font-sans-serif-text);
-    font-size: var(--font-size-6);
-    font-weight: 600;
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-title);
     line-height: 48px;
     margin-bottom: 0;
 }
@@ -46,9 +64,10 @@
 .presentationBody {
     font-family: var(--font-sans-serif-text);
     font-weight: var(--font-weight-normal);
-    font-size: var(--font-size-8);
+    font-size: var(--font-size-7);
     line-height: 24px;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .presentationBody > .highlights {
@@ -59,6 +78,8 @@
 @media screen and (min-width: 1024px) {
     .presentationTitle {
         font-size: var(--font-size-2);
+        z-index: 1;
+        position: relative;
     }
 
     .presentationTextContainer {
@@ -72,8 +93,15 @@
         font-size: var(--font-size-5);
     }
 
-    .presentationPicture:nth-child(1) {
+    .presentationPicture:first-child {
         margin-bottom: -7rem;
+        order: 1;
+        align-self: flex-end;
+    }
+
+    .presentationPicture:nth-child(2) {
+        max-width: 100%;
+        order: 2;
     }
 
     .presentationPictureContainer {
@@ -82,6 +110,16 @@
         flex-grow: 0;
         align-items: flex-end;
         justify-content: center;
+    }
+
+    .background-color-desktop {
+        position: absolute;
+        background-color: var(--beige);
+        width: 45rem;
+        height: 20rem;
+        margin-top: -15rem;
+        margin-left: -15rem;
+        z-index: 0;
     }
 }
 
