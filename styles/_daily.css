@@ -1,6 +1,7 @@
 .daily-mobile-title {
     font-size: var(--font-size-5);
-    font-weight: var(--font-weight-blacker);
+    font-weight: var(--font-weight-title);
+    letter-spacing: -0.05rem;
     margin-top: 3rem;
 }
 
@@ -20,15 +21,20 @@
     margin: 1rem;
     border-radius: 0.5rem;
 }
-
+.daily-dish-title,
 .daily-title {
-    font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
     font-weight: var(--font-weight-title);
+    letter-spacing: -0.05rem;
     text-align: center;
 }
 
+.daily-dish-title{
+    font-style: italic;
+}
 .daily-description {
     display: none;
+
 }
 
 .chef-description {
@@ -51,11 +57,13 @@
         border-radius: 0;
     }
 
+    .daily-dish-title,
     .daily-title {
         font-size: var(--font-size-2);
         text-align: left;
         font-weight: var(--font-weight-title);
         letter-spacing: -0.05rem;
+        font-style: normal;
     }
 
     .chef-description,

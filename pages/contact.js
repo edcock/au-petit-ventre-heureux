@@ -13,7 +13,6 @@ const Contact = () => {
     return (
         <Layout>
             <section className="contact-hero-container">
-
                 <div className="contact-hero-title-container">
                     <h4 className="contact-hero-title">
                         34 rue de la République <br/>
@@ -23,8 +22,8 @@ const Contact = () => {
                 <div className='contact-mobile-hero-map'>
                     <MapwithNoSSR/>
                 </div>
-            </section>
                 <Image src={'/images/facade.jpg'} width={1264} height={668}/>
+            </section>
             <div className='flex flex-row-ns flex-column justify-between'>
                 <div className='contact-contact-container'>
                     <div className='footerInformation'>

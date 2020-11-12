@@ -22,7 +22,7 @@ export default () => {
                         <div className="daily-container flex flex-column flex-row-ns items-center">
                             <div
                                 className={`w-100 w-60-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" + " order-2-ns"} order-1`}>
-                                <h1 className="daily-title">{producer.title}</h1>
+                                <h1 className="daily-dish-title">{producer.title}</h1>
                                 <p className="daily-description">
                                     {producer.description}
                                 </p>
