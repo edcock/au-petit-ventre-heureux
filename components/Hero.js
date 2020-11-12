@@ -6,7 +6,8 @@ const Hero = () => {
         <section className="heroContainer">
             <div className="heroTitleContainer">
                 <h1 className="heroTitle">
-                    PLATS CUISINÉS - TRAITEUR <br/>RÔTISSERIE <br/>RESTAURATION RAPIDE <span className='a-emporter'>À EMPORTER</span>
+                    PLATS CUISINÉS - TRAITEUR <br/>RÔTISSERIE <br/>
+                    RESTAURATION RAPIDE <span className='a-emporter'>À EMPORTER</span>
                 </h1>
                 <h4 className="heroSubtitle">
                     Voir la carte -

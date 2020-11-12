@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 3vh;
+    margin-top: 1vh;
 }
 
 .headerLogoContainer {
@@ -40,7 +40,8 @@
 }
 
 /* -ns */
-@media screen and (min-width: 50em) {.headerNavLink {
+@media screen and (min-width: 50em) {
+    .headerNavLink {
         padding-left: 2vw;
         color: var(--gray);
         text-decoration: none;
@@ -54,6 +55,7 @@
     .headerMobileNavLinksContainer {
         display: none;
     }
+
     .headerLogoContainer {
         max-width: 8rem;
     }

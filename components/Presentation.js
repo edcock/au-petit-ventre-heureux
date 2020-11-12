@@ -17,11 +17,10 @@ const Presentation = () => {
                 <div className='presentationText'>
                     <h2 className='presentationTitle'> Pourquoi nous choisir ?</h2>
                     <p className='presentationBody'>
-                        <span className='highlights'>Nous sommes une petite entreprise familiale. </span>Notre
-                        savoir faire et
-                        notre proximité avec nos clients nous permet de facilement comprendre leurs besoins et d’adapter
-                        nos propositions au plus proche de
-                        leurs attentes. Notre chef, au quotidien, axe son travail sur la créativité et l’originalité.
+                        <span className='highlights'>Nous sommes une petite entreprise familiale. </span>Notre savoir
+                        faire et notre proximité avec nos clients nous permet de facilement comprendre leurs
+                        besoins et d’adapter nos propositions au plus proche de leurs attentes. Notre chef, au
+                        quotidien, axe son travail sur la créativité et l’originalité.
                         <br/><span className='highlights'> Oui chef !!</span>
                     </p>
                 </div>
