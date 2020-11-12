@@ -19,7 +19,7 @@ export default function Footer() {
                             </li>
                             <li className='contactInfo'>
                                 <Image src={'/images/green-icons/address.svg'} width={20} height={20}/>
-                                <span className='ph3'><address> 34 rue de la Republique <br/>24200 SARLAT</address></span>
+                                <span className='ph3'> 34 rue de la Republique <br/>24200 SARLAT</span>
                             </li>
                             <li className={'contactInfo'}>
                                 <Image src={'/images/green-icons/envelop.svg'} width={20} height={20}/>
