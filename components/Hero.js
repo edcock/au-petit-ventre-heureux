@@ -16,7 +16,7 @@ const Hero = () => {
                 </h4>
             </div>
             <div className='mobileHeroPicture'>
-                <Image src={'/images/hero.jpg'} width={1264} height={668}/>
+                <Image src={'/images/hero.jpg'} width={1264} height={668} alt={'La bonne soupe !'}/>
             </div>
             <div className='heroCTAContainer'>
                 <Link href={'plat-du-jour'}>

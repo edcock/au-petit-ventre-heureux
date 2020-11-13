@@ -40,19 +40,19 @@ const Contact = () => {
                             <h3 className='footerTitle'>Contact:</h3>
                             <ul className='contactInfoList'>
                                 <li className='contactInfo'>
-                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20}/>
+                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20} alt={'telephone'}/>
                                     <span className='ph3 '>06 16 32 50 23</span>
                                 </li>
                                 <li className='contactInfo'>
-                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20}/>
+                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20} alt={'telephone'}/>
                                     <span className='ph3'>05 47 27 40 47</span>
                                 </li>
                                 <li className={'contactInfo'}>
-                                    <Image src={'/images/green-icons/address.svg'} width={20} height={20}/>
+                                    <Image src={'/images/green-icons/address.svg'} width={20} height={20} alt={'adresse'}/>
                                     <span className='ph3'> 34 rue de la Republique <br/>24200 SARLAT</span>
                                 </li>
                                 <li className={'contactInfo'}>
-                                    <Image src={'/images/envelop.svg'} width={20} height={20}/>
+                                    <Image src={'/images/envelop.svg'} width={20} height={20} alt={'enveloppe'}/>
                                     <span className='ph3'>bonjour@aupetitventreheureux.fr</span>
                                 </li>
                             </ul>

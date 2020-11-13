@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 import Presentation from "../components/Presentation";
 import Image from "next/image";
 import Testimonials from "../components/Testimonials";
-import {request} from "../lib/api";
 
 export default function Index({data}) {
     console.log(data)
@@ -17,7 +16,8 @@ export default function Index({data}) {
                 <Hero/>
                 <Presentation/>
                 <div className='mt7-ns'>
-                    <Image src={'/images/bistrot.jpg'} width={1258} height={770} layout={'responsive'}/>
+                    <Image src={'/images/bistrot.jpg'} width={1258} height={770} layout={'responsive'}
+                           alt={'presentation de la salle'}/>
                 </div>
                 <Testimonials/>
             </Layout>
