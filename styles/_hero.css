@@ -9,14 +9,13 @@
     font-family: var(--font-sans-serif-text);
     font-size: var(--font-size-5);
     letter-spacing: -0.06rem;
-
 }
 
 .a-emporter {
     color: var(--green);
     font-style: italic;
     display: inline-block;
-    padding-left: 1rem ;
+    padding-left: 1rem;
     /*border-left: 1px solid black;*/
 }
 
@@ -80,17 +79,66 @@
 
     .heroTitle {
         font-size: var(--font-size-3);
-        line-height: var(--font-size-3);
+        line-height: var(--line-height-title);
         padding-left: 1.43rem;
     }
 
     .heroSubtitle {
         font-size: var(--font-size-4);
-        padding-left: 1.43rem;
-        font-family: var(--font--helvetica-text);
+        font-family: var(--font-sans-serif-text);
         text-decoration: none;
         color: var(--dark-gray);
         margin: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 20vw;
+        transition: all 0.5s ease;
+        text-transform: uppercase;
+    }
+
+    .heroSubtitle:hover {
+        padding-left: 2vw;
+        color: var(--green);
+    }
+
+    .heroSubtitle::before {
+        content: "";
+        width: 0;
+        background-color: black;
+        display: block;
+        height: 0.1rem;
+        position: absolute;
+        left: 0;
+        transition: all 0.5s ease
+
+    }
+
+    .heroSubtitle::after {
+        content: "";
+        width: 7vw;
+        background-color: black;
+        display: block;
+        height: 0.1rem;
+        position: absolute;
+        right: 0;
+        transition: all 0.5s ease
+    }
+
+    .heroSubtitle:hover:after {
+        content: "";
+        width: 4vw;
+        background-color: var(--green);
+    }
+
+    .heroSubtitle:hover:before {
+        content: "";
+        width: 2vw;
+        background-color: var(--green);
+    }
+
+    .hero-link {
+        padding-left: 1.43rem;
     }
 
     .heroImageContainer {

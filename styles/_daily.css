@@ -53,8 +53,8 @@
 
     .daily-container {
         border: none;
-        margin: 0;
         border-radius: 0;
+        min-height: 50vh;
     }
 
     .daily-dish-title,

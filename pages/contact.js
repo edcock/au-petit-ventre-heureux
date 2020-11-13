@@ -3,6 +3,7 @@ import Image from "next/image";
 import {useForm} from "react-hook-form";
 import React from 'react';
 import dynamic from "next/dynamic";
+import {send} from 'emailjs-com'
 
 const MapwithNoSSR = dynamic(() => import("../components/Map"), {
     ssr: false
@@ -10,6 +11,14 @@ const MapwithNoSSR = dynamic(() => import("../components/Map"), {
 const Contact = () => {
     const {register, handleSubmit, watch, errors} = useForm();
     const onSubmit = data => console.log(data);
+    const sendEmail = (e) => {
+        console.log(e)
+        send('service_apvh', 'contact', e, 'user_ADa3MD0No1yxNq2z4woEK').then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
     return (
         <Layout>
             <section className="contact-hero-container">
@@ -55,7 +64,7 @@ const Contact = () => {
                             le
                             plus vite possible :)
                         </p>
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                        <form onSubmit={handleSubmit(sendEmail)}>
                             <div className="form-field mw6">
                                 <label className="input-label">Nom</label>
                                 <input name="name" ref={register({required: true})} className={'form-input'}/>
@@ -93,7 +102,6 @@ const Contact = () => {
                                     className='input-error'>Ce renseignement est primoridal pour vous recontacter.</span>}
                             </div>
                             <input type="submit" className="green-cta" value={"Envoyer"}/>
-
                         </form>
                     </div>
                 </div>

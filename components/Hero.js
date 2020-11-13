@@ -9,9 +9,9 @@ const Hero = () => {
                     PLATS CUISINÉS - TRAITEUR <br/>RÔTISSERIE <br/>
                     RESTAURATION RAPIDE <span className='a-emporter'>À EMPORTER</span>
                 </h1>
-                <h4>
+                <h4 className='hero-link'>
                     <Link href={"/notre-carte"}>
-                        <a className="heroSubtitle">Voir la carte -</a>
+                        <a className="heroSubtitle">Voir la carte</a>
                     </Link>
                 </h4>
             </div>

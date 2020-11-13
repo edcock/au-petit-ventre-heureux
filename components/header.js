@@ -90,7 +90,7 @@ const Header = () => {
                         </div>
                         <div id="addressModal" className='headerMobileNavLink z-5'>
                             <Link href={'/contact'}>
-                                <Image src={'/images/address.svg'} width={17} height={18}/>
+                                <a> <Image src={'/images/address.svg'} width={17} height={18}/></a>
                             </Link>
                         </div>
                         <div id="menu" className='headerMobileNavLink'>

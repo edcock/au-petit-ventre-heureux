@@ -1,14 +1,13 @@
 import Layout from '../components/layout'
-import {getAllPostsForHome} from '../lib/api'
 import Head from 'next/head'
 import Hero from "../components/Hero";
 import Presentation from "../components/Presentation";
 import Image from "next/image";
 import Testimonials from "../components/Testimonials";
+import {request} from "../lib/api";
 
-export default function Index({allPosts}) {
-    const heroPost = allPosts[0]
-    const morePosts = allPosts.slice(1)
+export default function Index({data}) {
+    console.log(data)
     return (
         <>
             <Layout>
@@ -24,11 +23,4 @@ export default function Index({allPosts}) {
             </Layout>
         </>
     )
-}
-
-export async function getStaticProps({preview}) {
-    const allPosts = await getAllPostsForHome(preview)
-    return {
-        props: {allPosts},
-    }
 }

@@ -1,14 +1,8 @@
 import Layout from "../components/layout";
 import Image from "next/image";
+import {getAllDailyDishes} from "../lib/api";
 
-export default () => {
-    let producers = [{
-        title: "Aubergine farcie au saumon ",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean praesent non egestas varius" +
-            " dictum condimentum quis elementum. Nec, quisque lacus bibendum vitae quis cursus consequat sit. Scelerisque ut cras amet, fermentum mi lacinia posuere. Convallis euismod turpis in maecenas id convallis.",
-        img: "/images/plat-du-jour.jpg"
-    },
-    ]
+export default ({allDailyDishes}) => {
     return (
         <Layout>
             <article className="pv4 ph0-l">
@@ -17,19 +11,22 @@ export default () => {
                     afin de garantir la fraîcheur des produits cuisinés.
                     <h2 className='daily-mobile-title'>Notre selection du jour</h2>
                 </div>
-                {producers.map((producer, index) => {
+                {allDailyDishes.map((dailyDish, index) => {
                     return (
                         <div className="daily-container flex flex-column flex-row-ns items-center">
                             <div
                                 className={`w-100 pl4-ns pr3-ns w-60-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" + " order-2-ns"} order-1`}>
-                                <h1 className="daily-dish-title">{producer.title}</h1>
+                                <h1 className="daily-dish-title">{dailyDish.name}</h1>
                                 <p className="daily-description">
-                                    {producer.description}
+                                    {dailyDish.description}
                                 </p>
                             </div>
                             <div
                                 className={`${index % 2 === 0 ? "order-1-ns" : "order-2-ns flex justify-end"} order-2 mb3 mb0-ns w-90 w-40-ns`}>
-                                <Image src={producer.img} width={541} height={361} alt={producer.title}/>
+                                <Image src={dailyDish.picture.url}
+                                       width={dailyDish.picture.width}
+                                       height={dailyDish.picture.height}
+                                       alt={dailyDish.picture.alt}/>
                             </div>
                         </div>
                     )
@@ -52,4 +49,11 @@ export default () => {
         </Layout>
     )
 
+}
+
+export async function getStaticProps() {
+    const allDailyDishes = await getAllDailyDishes()
+    return {
+        props: allDailyDishes
+    };
 }
