@@ -38,12 +38,11 @@ export default function Meta() {
             <meta property="og:site_name" content={HOME_OG_TITLE}/>
             <meta property="og:locale" content="fr_FR"/>
             <meta property="og:url" content={HOME_OG_URL}/>
-            <!-- HTML Meta Tags -->
             <title>Au petit ventre heureux</title>
             <meta name="twitter:card" content="summary_large_image"/>
             <meta property="twitter:domain" content="aupetitventreheureux.fr"/>
-            <meta property="twitter:url" content="https://www.aupetitventreheureux.fr"/>
-            <meta name="twitter:title" content="Au petit ventre heureux"/>
+            <meta property="twitter:url" content={HOME_OG_URL}/>
+            <meta name="twitter:title" content={HOME_OG_TITLE}/>
             <meta name="twitter:description" content={HOME_OG_DESCRIPTION}/>
             <meta name="twitter:image" content={HOME_OG_IMAGE_URL}/>
         </Head>
