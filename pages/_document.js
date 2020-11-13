@@ -1,5 +1,5 @@
 import Document, {Head, Html, Main, NextScript} from 'next/document'
-import { Fragment } from "react";
+import {Fragment} from "react";
 
 export default class MyDocument extends Document {
 
@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
                     />
                     <script dangerouslySetInnerHTML={this.setGoogleTags()}/>
                 </Fragment>
-                )}
                 </body>
             </Html>
         )
