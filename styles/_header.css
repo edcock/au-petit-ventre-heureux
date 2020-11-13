@@ -12,15 +12,16 @@
 
 .headerMobileNavLinksContainer {
     display: flex;
-    flex-grow: 1;
     justify-content: space-between;
-    max-width: 40vw;
+    width: 40vw;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
 }
 
 .headerMobileNavLink {
     margin: 0;
     display: flex;
-    width: 5vw;
 }
 
 .headerMobileNavLink .disable {
@@ -46,6 +47,7 @@
     width: 70%;
     position: absolute;
     right: 29vw;
+    top: 2.5rem;
 }
 
 .headerNavLinksContainer {
@@ -71,6 +73,7 @@
     right: 5vw;
     z-index: 3;
     transition: all 1s;
+    top: 2.5rem;
 }
 
 .headerNavLink-mobile-container {
@@ -98,20 +101,23 @@
 /* -ns */
 @media screen and (min-width: 50em) {
     .headerNavLink {
-        margin-left: 2vw;
-        margin-bottom: 1rem;
         color: var(--dark-gray);
         text-decoration: none;
         font-size: var(--font-size-5);
     }
 
     .headerNavLink:hover {
-        border-bottom: 4px solid var(--dark-gray);
+        border-bottom: 1px solid var(--dark-gray);
         transition: 200ms ease;
     }
 
     .headerNavLinksContainer {
-        display: block;
+        display: flex;
+        width: 40vw;
+        align-items: center;
+        align-content: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .headerMobileNavLinksContainer {

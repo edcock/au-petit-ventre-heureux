@@ -33,7 +33,7 @@ const Contact = () => {
                 </div>
                 <Image src={'/images/facade.jpg'} width={1264} height={668}/>
             </section>
-            <div className='flex flex-column vh-100-ns'>
+            <div className='flex flex-column vh-100-ns mt4 mt0-ns'>
                 <div className="flex flex-row-ns flex-column justify-between-ns">
                     <div className='contact-contact-container'>
                         <div className='footerInformation'>

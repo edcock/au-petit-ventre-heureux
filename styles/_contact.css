@@ -13,6 +13,7 @@
     position: relative;
     z-index: 2;
     background-color: var(--white);
+    margin-bottom: 2rem;
 }
 
 .contact-hero-title {
@@ -28,6 +29,7 @@
     position: relative;
     z-index: 1;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .contact-contact-container {
@@ -76,6 +78,7 @@
 
 .input-error {
     color: var(--red);
+    font-size: var(--font-size-7);
 }
 
 .form-disclaimer {
@@ -110,7 +113,7 @@ input[type = checkbox] {
     .form-intro {
         font-size: var(--font-size-3);
         color: var(--dark-gray);
-        font-weight: var(--font-weight-title);
+        font-weight: var(--font-weight-normal);
         line-height: var(--line-height-title);
     }
 }

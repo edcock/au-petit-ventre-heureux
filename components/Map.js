@@ -4,7 +4,11 @@ import React from "react";
 
 const MapBox = ReactMapboxGl({
     accessToken:
-        "pk.eyJ1IjoiZWRvdWFyZC1taXN0ZXJlIiwiYSI6ImNraDk4bXYxNDEzMXgyb256aDVpajFpbmQifQ.nwfBpDtcUSgx9CFZGQ_v9g"
+        "pk.eyJ1IjoiZWRvdWFyZC1taXN0ZXJlIiwiYSI6ImNraDk4bXYxNDEzMXgyb256aDVpajFpbmQifQ.nwfBpDtcUSgx9CFZGQ_v9g",
+    preserveDrawingBuffer: false,
+    scrollZoom: false,
+    interactive: false,
+
 });
 export default () => {
     return (
@@ -16,7 +20,6 @@ export default () => {
                 height: "50vh",
                 width: "100%"
             }}
-            interactive={false}
         >
             <ZoomControl/>
             <Marker
