@@ -16,7 +16,6 @@
     font-style: italic;
     display: inline-block;
     padding-left: 1rem;
-    /*border-left: 1px solid black;*/
 }
 
 .heroSubtitle {
@@ -110,7 +109,7 @@
         padding: 1.43rem 3vw;
         position: absolute;
         top: -5rem;
-        width: 50%;
+        width: 60%;
     }
 
     .heroTitle {
