@@ -21,8 +21,42 @@
 
 .heroSubtitle {
     font-family: var(--font-sans-serif-text);
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-6);
     font-weight: var(--font-weight-normal);
+    text-decoration: none;
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heroSubtitle::after {
+    content: "";
+    width: 12vw;
+    background-color: black;
+    display: block;
+    height: 0.1rem;
+    position: relative;
+    right: 0;
+    transition: all 0.5s ease
+}
+
+.heroSubtitle:active:after {
+    content: "";
+    width: 12vw;
+    background-color: black;
+    display: block;
+    height: 0.3rem;
+    position: relative;
+    right: 0;
+    transform: translateX(10vw);
+    transition: all 0.5s ease
+}
+
+.hero-link {
+    max-width: 40%;
+
 }
 
 .mobileHeroPicture {
@@ -48,6 +82,8 @@
     font-weight: var(--font-weight-blacker);
     text-decoration: none;
     color: var(--white);
+    width: 100%;
+    margin: 1vh 0;
 }
 
 /* -ns */
@@ -152,9 +188,12 @@
     .heroCTAContainer {
         display: flex;
         flex-direction: row;
-        flex-grow: 1;
         align-items: center;
         justify-content: flex-end;
+        width: 15rem;
+        position: absolute;
+        right: -3vw;
+        top: 20vh;
     }
 
     .heroCTA {
@@ -169,11 +208,16 @@
         font-size: var(--font-size-3);
         height: 15rem;
         width: 15rem;
-        margin-right: -3rem;
         color: var(--dark-gray);
         text-decoration: none;
+        transition: 100ms ease-in-out;
     }
 
+    .heroCTA:hover {
+        background-color: var(--green);
+        color: var(--white);
+        transition: 200ms ease-in-out;
+    }
 }
 
 /* mobile -> portrait Tablet */

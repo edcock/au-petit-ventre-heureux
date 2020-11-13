@@ -2,13 +2,15 @@ import Layout from "../components/layout";
 import Head from "next/head";
 import React from "react";
 
-export default () => {
+const NotreCarte = () => {
     return (
         <Layout>
             <Head>
                 <title>Au Petit Ventre Heureux</title>
             </Head>
-            <div className='menuContainer'>
+            <div className='menuContainer' onLoad={() => {
+                console.log(document.querySelector('.menuContainer'))
+            }}>
                 <div className='flex flex-row-ns flex-column center-ns'>
                     <div className="vertical-separator">
                         <div className='menu'>
@@ -71,3 +73,4 @@ export default () => {
         </Layout>
     )
 }
+export default NotreCarte;

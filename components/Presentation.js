@@ -4,7 +4,17 @@ import React from "react";
 const Presentation = () => {
 
     return (
-        <div id="qui-sommes-nous" className='presentationContainer'>
+        <div className='presentationContainer' onWheel={() => {
+            document.querySelectorAll('.presentationPicture').forEach((item) => {
+                item.style.opacity = 1
+            });
+        }}
+             onTouchMove={() => {
+                 document.querySelectorAll('.presentationPicture').forEach((item) => {
+                     item.style.opacity = 1
+                 });
+             }}
+        >
             <div className="presentationPictureContainer">
                 <div className='presentationPicture '>
                     <Image src={'/images/facade.jpg'} height={408} width={708}/>

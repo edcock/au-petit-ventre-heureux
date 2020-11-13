@@ -6,7 +6,7 @@ import Link from "next/link";
 const Header = () => {
 
     let links = [
-        {value: "Plats du jour", relativePath: "/plats-du-jour"},
+        {value: "Plat du jour", relativePath: "/plat-du-jour"},
         {value: "Notre carte", relativePath: "/notre-carte"},
         {value: "Nos producteurs", relativePath: "/nos-producteurs"},
         {value: "Contact", relativePath: "/contact"},
