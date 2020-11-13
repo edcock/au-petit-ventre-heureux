@@ -27,7 +27,7 @@ export default function Meta() {
       <meta name="theme-color" content="#000" />
       <meta
         name="description"
-        content={`petite entreprise familiale. Notre savoir faire et notre proximité avec nos clients nous permet de facilement comprendre leurs besoins et d’adapter nos propositions au plus proche de leurs attentes. Notre chef, au quotidien, axe son travail sur la créativité et l’originalité.`}
+        content={`Petite entreprise familiale de restauration rapide, traiteur et rotisserie. Notre savoir faire et notre proximité avec nos clients nous permet de facilement comprendre leurs besoins et d’adapter nos propositions au plus proche de leurs attentes. Notre chef, au quotidien, axe son travail sur la créativité et l’originalité.`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
