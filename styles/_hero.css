@@ -55,7 +55,6 @@
 
 .hero-link {
     max-width: 40%;
-
 }
 
 .mobileHeroPicture {
@@ -100,7 +99,9 @@
     .mobileHeroPicture {
         display: none;
     }
-
+    .hero-link {
+        max-width: 100%;
+    }
     .heroTitleContainer {
         z-index: 1;
         background-color: var(--white);
@@ -151,7 +152,7 @@
 
     .heroSubtitle::after {
         content: "";
-        width: 7vw;
+        width: 8vw;
         background-color: black;
         display: block;
         height: 0.1rem;
@@ -162,13 +163,13 @@
 
     .heroSubtitle:hover:after {
         content: "";
-        width: 4vw;
+        width: 5vw;
         background-color: var(--green);
     }
 
     .heroSubtitle:hover:before {
         content: "";
-        width: 2vw;
+        width: 1vw;
         background-color: var(--green);
     }
 

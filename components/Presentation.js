@@ -17,10 +17,10 @@ const Presentation = () => {
         >
             <div className="presentationPictureContainer">
                 <div className='presentationPicture '>
-                    <Image src={'/images/facade.jpg'} height={408} width={708}/>
+                    <Image src={'/images/facade.jpg'} height={408} width={708} alt="Au petit ventre heureux ! "/>
                 </div>
                 <div className='presentationPicture'>
-                    <Image src={'/images/planche.jpg'} height={634} width={428}/>
+                    <Image src={'/images/planche.jpg'} height={634} width={428} alt="planche apéro !"/>
                 </div>
                 <div className='background-color-mobile'/>
             </div>

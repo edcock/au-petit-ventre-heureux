@@ -86,7 +86,7 @@
 .headerNavLink-mobile {
     font-size: var(--font-size-6);
     text-decoration: none;
-    color: var(--gray-500);
+    color: var(--dark-gray);
     padding: 1rem 0;
     border-bottom: 1px solid var(--dark-gray);
 }
@@ -98,10 +98,16 @@
 /* -ns */
 @media screen and (min-width: 50em) {
     .headerNavLink {
-        padding-left: 2vw;
-        color: var(--gray);
+        margin-left: 2vw;
+        margin-bottom: 1rem;
+        color: var(--dark-gray);
         text-decoration: none;
         font-size: var(--font-size-5);
+    }
+
+    .headerNavLink:hover {
+        border-bottom: 4px solid var(--dark-gray);
+        transition: 200ms ease;
     }
 
     .headerNavLinksContainer {
