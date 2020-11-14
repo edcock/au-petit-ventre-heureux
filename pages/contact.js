@@ -9,10 +9,8 @@ const MapwithNoSSR = dynamic(() => import("../components/Map"), {
     ssr: false
 });
 const Contact = () => {
-    const {register, handleSubmit, watch, errors} = useForm();
-    const onSubmit = data => console.log(data);
+    const {register, handleSubmit, errors} = useForm();
     const sendEmail = (e) => {
-        console.log(e)
         send('service_apvh', 'contact', e, 'user_ADa3MD0No1yxNq2z4woEK').then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -40,15 +38,18 @@ const Contact = () => {
                             <h3 className='footerTitle'>Contact:</h3>
                             <ul className='contactInfoList'>
                                 <li className='contactInfo'>
-                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20} alt={'telephone'}/>
+                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20}
+                                           alt={'telephone'}/>
                                     <span className='ph3 '>06 16 32 50 23</span>
                                 </li>
                                 <li className='contactInfo'>
-                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20} alt={'telephone'}/>
+                                    <Image src={'/images/green-icons/call.svg'} width={20} height={20}
+                                           alt={'telephone'}/>
                                     <span className='ph3'>05 47 27 40 47</span>
                                 </li>
                                 <li className={'contactInfo'}>
-                                    <Image src={'/images/green-icons/address.svg'} width={20} height={20} alt={'adresse'}/>
+                                    <Image src={'/images/green-icons/address.svg'} width={20} height={20}
+                                           alt={'adresse'}/>
                                     <span className='ph3'> 34 rue de la Republique <br/>24200 SARLAT</span>
                                 </li>
                                 <li className={'contactInfo'}>

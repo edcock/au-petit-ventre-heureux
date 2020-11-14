@@ -5,7 +5,7 @@ import {getAllDailyDishes} from "../lib/api";
 const SelectionDuJour = ({allDailyDishes}) => {
     return (
         <Layout>
-            <article className="pv4 ph0-l">
+            <article className="pv5 ph0-l">
                 <div className='daily-intro'>
                     Le Petit Ventre Heureux à fait le choix de favoriser les <span className="highlights">fournisseurs locaux et les filières courtes </span>
                     afin de garantir la fraîcheur des produits cuisinés.

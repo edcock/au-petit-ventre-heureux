@@ -11,7 +11,7 @@ export default function Layout({preview, children}) {
                 <Header/>
                 <main>{children}</main>
                 <Footer/>
-                <Link href={'/mention-legales'}><a className='link dark-gray'>Mentions légales</a></Link>
+                <Link href={'/mention-legales'}><a className='link dark-gray tc pb3'>Mentions légales</a></Link>
             </div>
         </>
     )
