@@ -9,11 +9,6 @@ const Presentation = () => {
                 item.style.opacity = 1
             });
         }}
-             onTouchMove={() => {
-                 document.querySelectorAll('.presentationPicture').forEach((item) => {
-                     item.style.opacity = 1
-                 });
-             }}
         >
             <div className="presentationPictureContainer">
                 <div className='presentationPicture '>
