@@ -19,7 +19,7 @@ const Hero = () => {
                 <Image src={'/images/hero.jpg'} width={1264} height={668} alt={'La bonne soupe !'}/>
             </div>
             <div className='heroCTAContainer'>
-                <Link href={'plat-du-jour'}>
+                <Link href={'selection-du-jour'}>
                     <a className='heroCTA'> Notre selection du jour </a>
                 </Link>
             </div>
