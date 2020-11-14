@@ -42,7 +42,7 @@ const SelectionDuJour = ({allDailyDishes}) => {
                     </div>
                     <div
                         className={`order-2-ns flex justify-end order-2 mb4 mb0-ns w-90 w-50-ns`}>
-                        <Image src={"/images/photo-chef.jpg"} width={541} height={361} alt="Notre Chef Pascal ! "/>
+                        <Image src={"/images/photo-chef.jpg"} width={437} height={361} alt="Notre Chef Pascal ! "/>
                     </div>
                 </div>
             </article>
