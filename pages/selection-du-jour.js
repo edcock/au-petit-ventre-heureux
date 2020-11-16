@@ -5,7 +5,7 @@ import {getAllDailyDishes} from "../lib/api";
 const SelectionDuJour = ({allDailyDishes}) => {
     return (
         <Layout>
-            <article className="pv5 ph0-l">
+            <div className="pv5 ph0-l">
                 <div className='daily-intro'>
                     Le Petit Ventre Heureux à fait le choix de favoriser les <span className="highlights">fournisseurs locaux et les filières courtes </span>
                     afin de garantir la fraîcheur des produits cuisinés.
@@ -13,7 +13,7 @@ const SelectionDuJour = ({allDailyDishes}) => {
                 </div>
                 {allDailyDishes.map((dailyDish, index) => {
                     return (
-                        <div className="daily-container flex flex-column flex-row-ns items-center">
+                        <div key={dailyDish.id} className="daily-container flex flex-column flex-row-ns items-center">
                             <div
                                 className={`w-100 pl4-ns pr3-ns w-60-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" + " order-2-ns"} order-1`}>
                                 <h1 className="daily-dish-title">{dailyDish.name}</h1>
@@ -45,7 +45,7 @@ const SelectionDuJour = ({allDailyDishes}) => {
                         <Image src={"/images/photo-chef.jpg"} width={437} height={361} alt="Notre Chef Pascal ! "/>
                     </div>
                 </div>
-            </article>
+            </div>
         </Layout>
     )
 
