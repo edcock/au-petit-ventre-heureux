@@ -58,4 +58,4 @@ const SelectionDuJour = ({allDailyDishes}) => {
 
 }
 
-export default SelectionDuJour(props);
+export default SelectionDuJour;
