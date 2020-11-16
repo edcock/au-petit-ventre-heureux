@@ -2,6 +2,13 @@ import Layout from "../components/layout";
 import Image from "next/image";
 import {getAllDailyDishes} from "../lib/api";
 
+export async function getStaticProps() {
+    const allDailyDishes = await getAllDailyDishes()
+    return {
+        props: allDailyDishes
+    };
+}
+
 const SelectionDuJour = ({allDailyDishes}) => {
     return (
         <Layout>
@@ -50,11 +57,5 @@ const SelectionDuJour = ({allDailyDishes}) => {
     )
 
 }
-export default SelectionDuJour;
 
-export async function getStaticProps() {
-    const allDailyDishes = await getAllDailyDishes()
-    return {
-        props: allDailyDishes
-    };
-}
+export default SelectionDuJour(props);
