@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {HOME_OG_DESCRIPTION, HOME_OG_IMAGE_URL, HOME_OG_TITLE, HOME_OG_URL} from '../lib/constants'
+import {HOME_OG_DESCRIPTION, HOME_OG_IMAGE_URL, HOME_OG_TITLE, HOME_OG_URL} from '../api/constants'
 
 export default function Meta() {
     return (

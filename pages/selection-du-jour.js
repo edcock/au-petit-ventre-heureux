@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 import Image from "next/image";
-import {getAllDailyDishes} from "../lib/api";
+import {getAllDailyDishes} from "../api/api";
 
 export async function getStaticProps() {
     const allDailyDishes = await getAllDailyDishes()
