@@ -14,7 +14,7 @@ export function request({query, variables, preview}) {
 }
 
 export async function getAllDailyDishes() {
-    return await request({
+    const data = await request({
         query: `query MyQuery {
                   allDailyDishes(filter: {active: {eq: true}}) {
                     id
@@ -31,10 +31,11 @@ export async function getAllDailyDishes() {
                   }
                 }`
     })
+    return data?.allDailyDishes
 }
 
 export async function getAllProducers() {
-    return await request({
+    const data =  await request({
         query: `query MyQuery {
                     allProducers(filter: {active: {eq: true}}, orderBy: _createdAt_ASC) {
                         id
@@ -50,4 +51,5 @@ export async function getAllProducers() {
                         description}
                    }`
     });
+    return data?.allProducers
 }
