@@ -1,12 +1,11 @@
 import Image from "next/image";
-import {request} from '../lib/datocms'
 import Layout from "../components/layout";
 import React from "react";
+import {request} from "../lib/datocms";
 
-const SELECTION_DU_JOUR_QUERY = `{
- allDailyDishes(filter: {active: {eq: true}}) {
-    id
-    name
+export async function getServerSideProps() {
+    const SELECTION_DU_JOUR_QUERY = `{ allDailyDishes(filter: {active: {eq: true}}) { id
+name
     description
     active
     picture {
@@ -18,12 +17,13 @@ const SELECTION_DU_JOUR_QUERY = `{
     }
   }
 }`
-
-export async function getStaticProps() {
-    const data = await request({query: SELECTION_DU_JOUR_QUERY})
-    return {props: data}
+    const data = await request({
+        query: SELECTION_DU_JOUR_QUERY,
+    });
+    return {
+        props: {data}
+    };
 }
-
 
 export default function SelectionDuJour({data}) {
     return (
@@ -36,7 +36,8 @@ export default function SelectionDuJour({data}) {
                 </div>
                 {data?.allDailyDishes.map((dailyDish, index) => {
                     return (
-                        <div key={dailyDish.id} className="daily-container flex flex-column flex-row-ns items-center">
+                        <div key={dailyDish.id}
+                             className="daily-container flex flex-column flex-row-ns items-center">
                             <div
                                 className={`w-100 pl4-ns pr3-ns w-60-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" + " order-2-ns"} order-1`}>
                                 <h1 className="daily-dish-title">{dailyDish.name}</h1>
@@ -59,7 +60,8 @@ export default function SelectionDuJour({data}) {
                         className="w-100 w-60-ns order-2-ns order-1">
                         <h1 className="daily-title">Notre Chef</h1>
                         <p className="chef-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean praesent non egestas varius
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean praesent non egestas
+                            varius
                             dictum condimentum quis elementum
                         </p>
                     </div>

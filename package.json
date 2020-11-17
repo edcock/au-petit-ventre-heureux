@@ -24,7 +24,8 @@
     "react-map-gl": "^5.2.10",
     "react-mapbox-gl": "^5.0.0",
     "remark": "12.0.0",
-    "remark-html": "11.0.1"
+    "remark-html": "11.0.1",
+    "tiny-json-http": "^7.3.0"
   },
   "devDependencies": {
     "dotenv": "8.2.0"

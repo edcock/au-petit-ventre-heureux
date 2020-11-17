@@ -2,8 +2,8 @@ import Layout from "../components/layout";
 import Image from "next/image";
 import {request} from "../lib/datocms";
 
-let ALL_PRODUCERS = `query MyQuery {
-    allProducers(filter: {active: {eq: true}}, orderBy: _createdAt_ASC) {
+export async function getServerSideProps() {
+    let ALL_PRODUCERS = `{ allProducers(filter: {active: {eq: true}}, orderBy: _createdAt_ASC) {
         id
         name
         picture {
@@ -14,15 +14,18 @@ let ALL_PRODUCERS = `query MyQuery {
             url
             title
         }
-        description}
-   }`;
+        description
+        }}`
 
-export async function getStaticProps() {
-    const data = await request({query: ALL_PRODUCERS})
-    return {props: data}
+    const data = await request({
+        query: ALL_PRODUCERS,
+    });
+    return {
+        props: {data}
+    };
 }
 
-export default ({data}) => {
+export default function NosProducteurs({data}) {
     return (
         <Layout>
             <article className="pv4 ph3 ph0-l min-vh-100">
