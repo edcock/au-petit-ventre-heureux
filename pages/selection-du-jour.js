@@ -20,15 +20,15 @@ const SELECTION_DU_JOUR_QUERY = `query MyQuery { allDailyDishes(filter: {active:
 export async function getStaticProps({preview}) {
     // If context.preview is true, append "/preview" to the API endpoint
     // to request draft data instead of published data.
-    const allDailyDishes = await request({
+    const data = await request({
         query: SELECTION_DU_JOUR_QUERY
     })
-    console.log(allDailyDishes)
-    return {props: allDailyDishes}
+    return {props: {data}}
 }
 
 
-export default function SelectionDuJour({allDailyDishes}) {
+export default function SelectionDuJour({data}) {
+    let {allDailyDishes} = data;
     return (
         <Layout>
             <div className="pv5 ph0-l">
