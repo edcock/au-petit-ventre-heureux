@@ -1,12 +1,32 @@
 import Layout from "../components/layout";
 import Image from "next/image";
-import {getAllProducers} from "../lib/api";
+import {request} from "../lib/datocms";
 
-export default ({allProducers}) => {
+let ALL_PRODUCERS = `query MyQuery {
+    allProducers(filter: {active: {eq: true}}, orderBy: _createdAt_ASC) {
+        id
+        name
+        picture {
+            alt
+            id
+            height
+            width
+            url
+            title
+        }
+        description}
+   }`;
+
+export async function getStaticProps() {
+    const data = await request({query: ALL_PRODUCERS})
+    return {props: data}
+}
+
+export default ({data}) => {
     return (
         <Layout>
             <article className="pv4 ph3 ph0-l min-vh-100">
-                {allProducers.map((producer, index) => {
+                {data?.allProducers.map((producer, index) => {
                     return (
                         <div key={index} className="flex flex-column flex-row-ns items-center mv3">
                             <div
@@ -29,11 +49,4 @@ export default ({allProducers}) => {
             </article>
         </Layout>
     )
-}
-
-export async function getStaticProps() {
-    const allProducers = await getAllProducers()
-    return {
-        props: allProducers
-    };
 }

@@ -21,12 +21,11 @@ const SELECTION_DU_JOUR_QUERY = `{
 
 export async function getStaticProps() {
     const data = await request({query: SELECTION_DU_JOUR_QUERY})
-    return {props: {data}}
+    return {props: data}
 }
 
 
 export default function SelectionDuJour({data}) {
-    let {allDailyDishes} = data;
     return (
         <Layout>
             <div className="pv5 ph0-l">
@@ -35,7 +34,7 @@ export default function SelectionDuJour({data}) {
                     afin de garantir la fraîcheur des produits cuisinés.
                     <h2 className='daily-mobile-title'>Notre selection du jour</h2>
                 </div>
-                {allDailyDishes.map((dailyDish, index) => {
+                {data?.allDailyDishes.map((dailyDish, index) => {
                     return (
                         <div key={dailyDish.id} className="daily-container flex flex-column flex-row-ns items-center">
                             <div
