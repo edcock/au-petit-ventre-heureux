@@ -1,8 +1,32 @@
 import Layout from "../components/layout";
 import Image from "next/image";
-import {getAllDailyDishes} from "../api/api";
+import {request} from '../api/api'
 
-export default ({allDailyDishes}) => {
+export async function getStaticProps({preview}) {
+    // If context.preview is true, append "/preview" to the API endpoint
+    // to request draft data instead of published data.
+    const data = await request({
+        query: `query MyQuery {
+                  allDailyDishes(filter: {active: {eq: true}}) {
+                    id
+                    name
+                    description
+                    active
+                    picture {
+                      width
+                      url
+                      title
+                      height
+                      alt
+                    }
+                  }
+                }`
+    })
+    return {props: data}
+}
+
+
+const SelectionDuJour = ({ allDailyDishes }) => {
     return (
         <Layout>
             <div className="pv5 ph0-l">
@@ -48,12 +72,5 @@ export default ({allDailyDishes}) => {
             </div>
         </Layout>
     )
-
 }
-
-export async function getStaticProps() {
-    const allDailyDishes = await getAllDailyDishes()
-    return {
-        props: {allDailyDishes}
-    };
-}
+export default SelectionDuJour
