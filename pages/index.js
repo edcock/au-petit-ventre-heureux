@@ -5,8 +5,7 @@ import Presentation from "../components/Presentation";
 import Image from "next/image";
 import Testimonials from "../components/Testimonials";
 
-export default function Index({data}) {
-    console.log(data)
+export default function Index() {
     return (
         <>
             <Layout>

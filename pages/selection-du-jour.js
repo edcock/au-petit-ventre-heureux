@@ -1,13 +1,8 @@
-import Layout from "../components/layout";
 import Image from "next/image";
-import {request} from '../api/api'
+import {request} from '../lib/datocms'
+import Layout from "../components/layout";
 
-export async function getStaticProps({preview}) {
-    // If context.preview is true, append "/preview" to the API endpoint
-    // to request draft data instead of published data.
-    const data = await request({
-        query: `query MyQuery {
-                  allDailyDishes(filter: {active: {eq: true}}) {
+const SELECTION_DU_JOUR_QUERY = `query MyQuery { allDailyDishes(filter: {active: {eq: true}}) {
                     id
                     name
                     description
@@ -21,12 +16,19 @@ export async function getStaticProps({preview}) {
                     }
                   }
                 }`
+
+export async function getStaticProps({preview}) {
+    // If context.preview is true, append "/preview" to the API endpoint
+    // to request draft data instead of published data.
+    const allDailyDishes = await request({
+        query: SELECTION_DU_JOUR_QUERY
     })
-    return {props: data}
+    console.log(allDailyDishes)
+    return {props: allDailyDishes}
 }
 
 
-const SelectionDuJour = ({ allDailyDishes }) => {
+export default function SelectionDuJour({allDailyDishes}) {
     return (
         <Layout>
             <div className="pv5 ph0-l">
@@ -57,7 +59,7 @@ const SelectionDuJour = ({ allDailyDishes }) => {
                 })}
                 <div className="flex flex-column flex-row-ns items-center">
                     <div
-                        className={`w-100 w-60-ns order-2-ns order-1`}>
+                        className="w-100 w-60-ns order-2-ns order-1">
                         <h1 className="daily-title">Notre Chef</h1>
                         <p className="chef-description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean praesent non egestas varius
@@ -65,7 +67,7 @@ const SelectionDuJour = ({ allDailyDishes }) => {
                         </p>
                     </div>
                     <div
-                        className={`order-2-ns flex justify-end order-2 mb4 mb0-ns w-90 w-50-ns`}>
+                        className="order-2-ns flex justify-end order-2 mb4 mb0-ns w-90 w-50-ns">
                         <Image src={"/images/photo-chef.jpg"} width={437} height={361} alt="Notre Chef Pascal ! "/>
                     </div>
                 </div>
@@ -73,4 +75,3 @@ const SelectionDuJour = ({ allDailyDishes }) => {
         </Layout>
     )
 }
-export default SelectionDuJour

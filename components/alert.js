@@ -1,6 +1,6 @@
 import Container from './container'
 import cn from 'classnames'
-import { EXAMPLE_PATH } from '../api/constants'
+import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Alert({ preview }) {
   return (
@@ -16,7 +16,7 @@ export default function Alert({ preview }) {
             <>
               This is page is a preview.{' '}
               <a
-                href="/api/exit-preview"
+                href="/lib/exit-preview"
                 className="underline hover:text-cyan duration-200 transition-colors"
               >
                 Click here

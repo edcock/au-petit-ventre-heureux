@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 import Image from "next/image";
-import {getAllProducers} from "../api/api";
+import {getAllProducers} from "../lib/api";
 
 export default ({allProducers}) => {
     return (
