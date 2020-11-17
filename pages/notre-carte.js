@@ -31,10 +31,10 @@ const NotreCarte = () => {
                         <div className='menu-list'>
                             <h3>Nos fromages :</h3>
                             <ul>
-                                <li>Tomme des Croquants à l’ail des Gars</li>
+                                <li>Tomme des Croquants à l’ail des Ours</li>
                                 <li>Tomme des Croquants à la liqueur de Noix</li>
+                                <li>Tomme des Croquants à la truffe d'été</li>
                                 <li>Pure Brebis affinés 12 mois</li>
-                                <li>Brebis bleu piment</li>
                             </ul>
                         </div>
                         <div className="separator self-end"/>
@@ -46,7 +46,6 @@ const NotreCarte = () => {
                             <div className='menu-list'>
                                 <h3>Nos plats cuisinés :</h3>
                                 <ul>
-                                    <li>Filet de dinde à la crème</li>
                                     <li>Aubergine gratinée</li>
                                     <li>Ragout d’agneau</li>
                                     <li>Saumon</li>
@@ -62,7 +61,7 @@ const NotreCarte = () => {
                             <ul>
                                 <li>Pain Bagniat</li>
                                 <li>Jambon blanc</li>
-                                <li>Saucisson de canard</li>
+                                <li>Jambon cru - fromage</li>
                                 <li>Foie gras de canard</li>
                                 <li>Magret Séchet</li>
                             </ul>
