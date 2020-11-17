@@ -1,28 +1,26 @@
 import Image from "next/image";
 import {request} from '../lib/datocms'
 import Layout from "../components/layout";
+import React from "react";
 
-const SELECTION_DU_JOUR_QUERY = `query MyQuery { allDailyDishes(filter: {active: {eq: true}}) {
-                    id
-                    name
-                    description
-                    active
-                    picture {
-                      width
-                      url
-                      title
-                      height
-                      alt
-                    }
-                  }
-                }`
+const SELECTION_DU_JOUR_QUERY = `{
+ allDailyDishes(filter: {active: {eq: true}}) {
+    id
+    name
+    description
+    active
+    picture {
+      width
+      url
+      title
+      height
+      alt
+    }
+  }
+}`
 
-export async function getStaticProps({preview}) {
-    // If context.preview is true, append "/preview" to the API endpoint
-    // to request draft data instead of published data.
-    const data = await request({
-        query: SELECTION_DU_JOUR_QUERY
-    })
+export async function getStaticProps() {
+    const data = await request({query: SELECTION_DU_JOUR_QUERY})
     return {props: {data}}
 }
 
