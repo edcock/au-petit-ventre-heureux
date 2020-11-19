@@ -18,6 +18,7 @@
 .menu-list:first-child {
     margin: 0 0 1rem 0
 }
+
 .menu-list {
     margin: 1rem 0
 }
@@ -59,32 +60,38 @@
         flex-direction: row;
         flex-wrap: wrap;
         transition: 1s ease-in-out;
-        margin-left: 0;
-        margin-bottom: 10vh;
+        margin: 0 auto 10vh;
+        max-width: 70vw;
     }
 
     .menu {
-        width: 40vw;
+        width: 35vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         height: 100%;
         border-bottom: none;
-        padding: 1vh 1vw;
+        padding: 1rem 1rem;
     }
 
     .menu:nth-child(odd) {
+        margin: auto;
+        align-items: flex-start;
+    }
+
+    .menu:nth-child(2n) {
         align-items: flex-end;
+        padding-left: 2rem;
     }
 
     .menu-list > h3 {
-        font-size: var(--font-size-2);
+        font-size: var(--font-size-4);
         margin-top: 1rem;
     }
 
     .menu-list > ul > li {
-        font-size: var(--font-size-4);
+        font-size: var(--font-size-6);
     }
 
     .menu-list > ul > li:first-letter {

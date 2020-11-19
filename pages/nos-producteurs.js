@@ -31,7 +31,7 @@ export default function NosProducteurs({data}) {
             <article className="producers-container">
                 {data?.allProducers.map((producer, index) => {
                     return (
-                        <div key={index} className="flex flex-column flex-row-ns items-center">
+                        <div key={index} className="flex flex-column flex-row-ns items-center mv4-ns">
                             <div
                                 className={`w-100 w-60-ns pl4-ns pr3-ns ${index % 2 === 0 ? "order-2-ns" : "order-1-ns" +
                                     " order-2-ns"} order-1`}>

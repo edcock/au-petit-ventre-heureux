@@ -70,16 +70,17 @@ const NotreCarte = () => {
             </div>
             <div className="chef-container">
                 <div className="separator"/>
-                <div className="flex flex-column flex-row-ns items-start justify-center mt5-ns">
-                    <div
-                        className="w-100 order-2-ns order-1">
+                <div className="flex flex-column flex-row-ns mt5-ns w-100 justify-between items-center">
+                    <div className="order-2">
                         <h1 className="chef-title">Notre Chef</h1>
-                        <p className="chef-description">
-                            Notre chef Pascal est passionné par la cuisine, c’est pour cette raison qu’il décide avec sa moitié Mary de s’installer dans la traverse à Sarlat la Caneda. <br/>Notre chef considère ses assiettes comme un défi, il faut une bonne cohérence entre les différentes sensations du toucher, du goût, de l'odorat, de la vue et ainsi parfaire ses créations.
-                        </p>
+                        <div className="chef-description">
+                            Notre chef Pascal est passionné par la cuisine, c’est pour cette raison qu’il décide avec sa
+                            moitié Mary de s’installer dans la traverse à Sarlat la Caneda. <br/>Notre chef considère
+                            ses assiettes comme un défi, il faut une bonne cohérence entre les différentes sensations du
+                            toucher, du goût, de l'odorat, de la vue et ainsi parfaire ses créations.
+                        </div>
                     </div>
-                    <div
-                        className="order-2-ns flex justify-end order-2 mb4 mb0-ns">
+                    <div className="order-1 chef-picture">
                         <Image src={"/images/photo-chef.jpg"} width={874} height={722} alt="Notre Chef Pascal ! "/>
                     </div>
                 </div>

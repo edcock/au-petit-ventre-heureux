@@ -5,6 +5,7 @@
     align-items: center;
     max-width: 90vw;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .chef-title {
@@ -12,7 +13,6 @@
     font-weight: var(--font-weight-title);
     font-size: var(--font-size-4);
     text-align: left;
-
 }
 
 .chef-description {
@@ -23,6 +23,16 @@
 }
 
 @media screen and (min-width: 50em) {
+    .chef-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 70vw;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
     .chef-title {
         font-size: var(--font-size-3);
         text-align: left;
@@ -30,17 +40,17 @@
         letter-spacing: -0.05rem;
         font-style: normal;
         line-height: 1;
-        margin-left: 5vw;
         margin-top: 0;
     }
 
     .chef-description {
         font-size: var(--font-size-5);
         display: block;
-        text-align: justify;
         line-height: var(--line-height-solid);
         max-width: 45ch;
-        margin-left: 5vw;
-        margin-right: 5vw;
+    }
+
+    .chef-picture{
+        max-width: 30vw;
     }
 }

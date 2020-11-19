@@ -1,5 +1,6 @@
 .dishes-container {
     margin-top: 5vh;
+    padding-bottom: 2rem;
 }
 
 .daily-mobile-title {
@@ -50,11 +51,6 @@
     text-align: center;
 }
 
-.chef-description {
-    font-size: var(--font-size-5);
-    text-align: center;
-}
-
 .daily-description {
     display: block;
     text-align: center;
@@ -86,6 +82,10 @@
 }
 
 @media screen and (min-width: 50em) {
+    .dishes-container {
+        padding-bottom: 2rem;
+    }
+
     .daily-intro {
         display: none;
     }

@@ -3,9 +3,10 @@
     text-decoration: none;
     background-color: var(--green);
     color: var(--white);
-    padding: 14px 86px;
+    padding: 1rem;
     border: 1px solid var(--green);
     font-weight: var(--font-weight-title);
+    border-radius: 5px;
 }
 .green-cta:active,
 .green-cta:hover {
