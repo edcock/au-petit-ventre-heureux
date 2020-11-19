@@ -77,12 +77,17 @@
 
     .menu:nth-child(odd) {
         margin: auto;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .menu:nth-child(2n) {
+    .menu:nth-child(even) {
         align-items: flex-end;
         padding-left: 2rem;
+        margin: auto;
+    }
+
+    .menu-list {
+        width: 20vw;
     }
 
     .menu-list > h3 {
