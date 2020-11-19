@@ -20,7 +20,7 @@
     width: 90vw;
 }
 
-.daily-container {
+.daily-container:first-child {
     border-bottom: 2px solid var(--green);
     padding-bottom: 1rem;
 }

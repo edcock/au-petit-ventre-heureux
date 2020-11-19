@@ -37,7 +37,7 @@ export default function SelectionDuJour({data}) {
     return (
         <Layout>
             <div className="pv3 ph0-l">
-                <div className="flex flex-row-ns flex-column flex-wrap vh-75 items-center">
+                <div className="flex flex-row-ns flex-column flex-wrap vh-75-ns items-center">
                     {data?.allDailyDishes.map((dailyDish, index) => {
                         return (
                             <div key={dailyDish.id}
