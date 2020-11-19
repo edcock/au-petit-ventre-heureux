@@ -42,7 +42,7 @@ const Header = () => {
                             }}>
                                 <Image src={'/images/cross.svg'} width={18} height={18}/>
                                 <div className='bg-white z-1 pa3 ba'>
-                                    <h3>Horaire:</h3>
+                                    <h3>Horaires:</h3>
                                     <table>
                                         <tbody>
                                         <tr>
