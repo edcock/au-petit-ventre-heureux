@@ -1,11 +1,22 @@
+.producers-container {
+    margin-top: 5vh;
+    min-height: 100vh;
+}
+
 .producerTitle {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-4);
     font-weight: var(--font-weight-title);
     letter-spacing: -0.05rem;
+    margin: 0;
+    line-height: 48px;
 }
 
 .producerDescription {
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-6);
+    line-height: var(--line-height-title);
+    font-weight: var(--font-weight-normal);
+    margin: 0 0 0.5rem;
+    text-align: justify;
 }
 
 @media screen and (min-width: 50em) {

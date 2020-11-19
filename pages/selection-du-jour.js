@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Layout from "../components/layout";
 import React from "react";
 import {request} from "../lib/datocms";
@@ -36,15 +35,16 @@ export default function SelectionDuJour({data}) {
     console.log(data.daily)
     return (
         <Layout>
-            <div className="pv3 ph0-l">
+            <div className="dishes-container">
                 <div className="flex flex-row-ns flex-column flex-wrap vh-75-ns items-center">
                     {data?.allDailyDishes.map((dailyDish, index) => {
                         return (
                             <div key={dailyDish.id}
                                  className="daily-container flex flex-column items-center">
-                                <div
-                                    className="w-100 pr3-ns w-50-ns order-2 h-100 flex flex-column justify-around">
-                                    <h1 className="daily-dish-title">{dailyDish.name} {renderPriceWithSpaces(dailyDish.price)}</h1>
+                                <div className="w-100 pr3-ns w-50-ns order-2 h-100 flex flex-column justify-around">
+                                    <h1 className="daily-dish-title">
+                                        {dailyDish.name} - {renderPriceWithSpaces(dailyDish.price)}
+                                    </h1>
                                     <div className="daily-starter">
                                         <p>{dailyDish.starter}</p>
                                         {dailyDish.secondStarter

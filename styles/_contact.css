@@ -5,22 +5,23 @@
 .contact-hero-container {
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 5vh;
 }
 
 .contact-hero-title-container {
-    max-width: 60%;
+    max-width: 50%;
     position: relative;
     z-index: 2;
     background-color: var(--white);
-    margin-bottom: 2rem;
 }
 
 .contact-hero-title {
-    font-weight: var(--font-weight-title);
+    font-weight: var(--font-weight-normal);
     font-family: var(--font-sans-serif-text);
-    font-size: var(--font-size-7);
-
+    font-size: var(--font-size-6);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    letter-spacing: -0.05rem    ;
 }
 
 .contact-mobile-hero-map {
@@ -44,14 +45,14 @@
 }
 
 .form-intro {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-6);
     color: var(--dark-gray);
     font-weight: var(--font-weight-title);
     line-height: var(--line-height-title);
 }
 
 .input-label {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-6);
     color: var(--dark-gray);
 }
 
@@ -115,5 +116,10 @@ input[type = checkbox] {
         color: var(--dark-gray);
         font-weight: var(--font-weight-normal);
         line-height: var(--line-height-title);
+    }
+
+    .input-label {
+        font-size: var(--font-size-5);
+        color: var(--dark-gray);
     }
 }

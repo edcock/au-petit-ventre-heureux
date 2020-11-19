@@ -35,7 +35,7 @@ const Contact = () => {
                 <div className="flex flex-row-ns flex-column justify-between-ns">
                     <div className='contact-contact-container'>
                         <div className='footerInformation'>
-                            <h3 className='footerTitle'>Contact:</h3>
+                            <h3 className='footerTitle'>Contact</h3>
                             <ul className='contactInfoList'>
                                 <li className='contactInfo'>
                                     <Image src={'/images/green-icons/call.svg'} width={20} height={20}

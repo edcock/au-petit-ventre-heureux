@@ -57,7 +57,8 @@
 
 .presentationTitle {
     font-family: var(--font-sans-serif-text);
-    font-size: var(--font-size-5);
+    letter-spacing: var(--letter-spacing-tight);
+    font-size: var(--font-size-4);
     font-weight: var(--font-weight-title);
     line-height: 48px;
     margin-bottom: 0;
@@ -66,14 +67,16 @@
 .presentationBody {
     font-family: var(--font-sans-serif-text);
     font-weight: var(--font-weight-normal);
-    font-size: var(--font-size-7);
-    line-height: 24px;
+    font-size: var(--font-size-6);
+    line-height: var(--line-height-title);
     margin-bottom: 0;
     margin-top: 0;
+    text-align: justify;
 }
 
 .presentationBody > .highlights {
     font-weight: var(--font-weight-title);
+    letter-spacing: -0.03rem;
 }
 
 /* -ns */
@@ -95,9 +98,10 @@
         font-size: var(--font-size-5);
     }
 
-    .presentationPicture{
+    .presentationPicture {
         opacity: 0;
     }
+
     .presentationPicture:first-child {
         margin-bottom: -7rem;
         order: 1;
