@@ -17,29 +17,72 @@
 }
 
 .daily-container {
-    border: 1px solid var(--green);
-    margin: 1rem;
-    border-radius: 0.5rem;
+    width: 90vw;
 }
+
+.daily-container {
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 1rem;
+}
+
+.daily-container:nth-child(2) {
+    padding-top: 2rem;
+}
+
 .daily-dish-title,
 .daily-title {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-3);
     font-weight: var(--font-weight-title);
     letter-spacing: -0.05rem;
     text-align: center;
+    margin: 0
 }
 
-.daily-dish-title{
+.daily-dish-title {
     font-style: italic;
+    font-size: var(--font-size-3);
 }
-.daily-description {
-    display: none;
 
+.daily-dish-title,
+.daily-description {
+    padding: 1rem 1rem 1rem 0rem;
+    white-space: pre-line;
+    text-align: center;
 }
 
 .chef-description {
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-5);
     text-align: center;
+}
+
+.daily-description {
+    display: block;
+    text-align: center;
+    line-height: 2;
+    font-weight: 600;
+}
+
+.daily-starter,
+.daily-main-course,
+.daily-dessert {
+    font-size: var(--font-size-5);
+    display: block;
+    text-align: center;
+    line-height: 1;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.daily-starter p,
+.daily-main-course p,
+.daily-dessert p {
+    margin: 0
+}
+
+.daily-starter p:first-letter,
+.daily-main-course p:first-letter,
+.daily-dessert p:first-letter {
+    text-transform: capitalize;
 }
 
 @media screen and (min-width: 50em) {
@@ -54,22 +97,72 @@
     .daily-container {
         border: none;
         border-radius: 0;
-        min-height: 50vh;
+        width: 45vw;
+        padding: 1rem;
+    }
+
+    .daily-container:first-child {
+        border-right: 2px solid var(--green);
+        border-bottom: none;
     }
 
     .daily-dish-title,
     .daily-title {
-        font-size: var(--font-size-2);
+        font-size: var(--font-size-3);
+        text-align: center;
+        font-weight: var(--font-weight-title);
+        letter-spacing: -0.05rem;
+        font-style: normal;
+        line-height: 1;
+    }
+
+    .chef-title {
+        font-size: var(--font-size-3);
         text-align: left;
         font-weight: var(--font-weight-title);
         letter-spacing: -0.05rem;
         font-style: normal;
+        line-height: 1;
+        margin-left: 5vw;
+        margin-top: 0;
     }
 
-    .chef-description,
-    .daily-description {
+    .chef-description {
         font-size: var(--font-size-5);
         display: block;
-        text-align: left;
+        text-align: justify;
+        line-height: 1;
+        max-width: 45ch;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .daily-description {
+        display: block;
+        text-align: center;
+        line-height: 2;
+        font-weight: 600;
+    }
+
+    .daily-starter,
+    .daily-main-course,
+    .daily-dessert {
+        display: block;
+        text-align: center;
+        line-height: 1;
+        font-weight: 600;
+        margin: 1rem 0;
+    }
+
+    .daily-starter p,
+    .daily-main-course p,
+    .daily-dessert p {
+        margin: 0
+    }
+
+    .daily-starter p:first-letter,
+    .daily-main-course p:first-letter,
+    .daily-dessert p:first-letter {
+        text-transform: capitalize;
     }
 }

@@ -80,7 +80,7 @@
     }
 
     .separator {
-        border-bottom: 1px solid var(--green);
+        border-bottom: 2px solid var(--green);
         width: 30vw;
         position: relative;
     }
