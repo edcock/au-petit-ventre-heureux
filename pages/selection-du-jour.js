@@ -32,7 +32,6 @@ export async function getServerSideProps() {
 }
 
 export default function SelectionDuJour({data}) {
-    console.log(data.daily)
     return (
         <Layout>
             <div className="dishes-container">

@@ -59,7 +59,7 @@ const Header = () => {
                                         </tr>
                                         <tr>
                                             <td className="timetableElement">Jeudi</td>
-                                            <td className="timetableElement">Fermé</td>
+                                            <td className="timetableElement">09:00-18h00</td>
                                         </tr>
                                         <tr>
                                             <td className="timetableElement">Vendredi</td>
