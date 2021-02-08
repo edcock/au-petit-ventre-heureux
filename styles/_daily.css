@@ -26,7 +26,7 @@
 }
 
 .daily-container:first-child {
-    border-bottom: 2px solid var(--green);
+    border-bottom: 2px solid var(--lightgray);
     padding-bottom: 1rem;
 }
 
@@ -46,7 +46,7 @@
 
 .daily-dish-title,
 .daily-description {
-    padding: 1rem 1rem 0 0rem;
+    padding: 1rem 1rem 0 0;
     white-space: pre-line;
     text-align: center;
 }
@@ -82,6 +82,11 @@
 }
 
 @media screen and (min-width: 50em) {
+
+    .daily-container:nth-child(2) {
+        padding: 1rem;
+    }
+
     .dishes-container {
         padding-bottom: 2rem;
     }
@@ -102,18 +107,18 @@
     }
 
     .daily-container:first-child {
-        border-right: 2px solid var(--green);
+        border-right: 2px solid var(--lightgray);
         border-bottom: none;
     }
-
     .daily-dish-title,
     .daily-title {
         font-size: var(--font-size-3);
         text-align: center;
         font-weight: var(--font-weight-title);
         letter-spacing: -0.05rem;
-        font-style: normal;
         line-height: 1;
+        font-style:italic ;
+        margin-bottom: 1rem;
     }
 
     .daily-description {
@@ -125,21 +130,30 @@
 
     .daily-starter,
     .daily-main-course,
-    .daily-dessert {
+    .daily-dessert,
+    .daily-drink {
         display: block;
         text-align: center;
         line-height: 1;
-        font-weight: 600;
+        font-weight: 400;
         margin: 1rem 0;
     }
 
     .daily-starter p,
     .daily-main-course p,
+    .daily-drink p,
     .daily-dessert p {
         margin: 0
     }
+    .daily-starter span,
+    .daily-main-course span,
+    .daily-drink span,
+    .daily-dessert span {
+        font-weight: 600;
+    }
 
     .daily-starter p:first-letter,
+    .daily-drink p:first-letter,
     .daily-main-course p:first-letter,
     .daily-dessert p:first-letter {
         text-transform: capitalize;
