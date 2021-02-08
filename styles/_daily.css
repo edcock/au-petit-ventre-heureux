@@ -39,9 +39,10 @@
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-title);
     letter-spacing: -0.05rem;
-    line-height: 48px;
+    line-height: 1;
     text-align: center;
-    margin: 0
+    margin: 0;
+    font-style: italic;
 }
 
 .daily-dish-title,
@@ -58,6 +59,7 @@
     font-weight: 600;
 }
 
+.daily-drink,
 .daily-starter,
 .daily-main-course,
 .daily-dessert {
@@ -69,12 +71,21 @@
     margin: 1rem 0;
 }
 
+.daily-drink p,
 .daily-starter p,
 .daily-main-course p,
 .daily-dessert p {
     margin: 0
 }
 
+.daily-starter span,
+.daily-main-course span,
+.daily-drink span,
+.daily-dessert span {
+    font-weight: 600;
+}
+
+.daily-drink p:first-letter,
 .daily-starter p:first-letter,
 .daily-main-course p:first-letter,
 .daily-dessert p:first-letter {
@@ -110,6 +121,7 @@
         border-right: 2px solid var(--lightgray);
         border-bottom: none;
     }
+
     .daily-dish-title,
     .daily-title {
         font-size: var(--font-size-3);
@@ -117,7 +129,7 @@
         font-weight: var(--font-weight-title);
         letter-spacing: -0.05rem;
         line-height: 1;
-        font-style:italic ;
+        font-style: italic;
         margin-bottom: 1rem;
     }
 
@@ -144,12 +156,6 @@
     .daily-drink p,
     .daily-dessert p {
         margin: 0
-    }
-    .daily-starter span,
-    .daily-main-course span,
-    .daily-drink span,
-    .daily-dessert span {
-        font-weight: 600;
     }
 
     .daily-starter p:first-letter,
