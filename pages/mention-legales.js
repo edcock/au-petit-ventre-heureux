@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 
 const MentionsLegales = () => {
     return <Layout>
-        <h2>Mention légales</h2>
+        <h2>Mentions légales</h2>
         <dl className="lh-title pa4 mt0">
             <dt className="f6 b">Hébergement</dt>
             <dd className="ml0">Vercel</dd>
