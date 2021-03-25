@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {HOME_OG_DESCRIPTION, HOME_OG_IMAGE_URL, HOME_OG_TITLE, HOME_OG_URL} from '../lib/constants'
 
-export default function Meta() {
+export default function Meta({pageTitle}) {
     return (
         <Head>
             <link
@@ -30,7 +30,7 @@ export default function Meta() {
                 content={HOME_OG_DESCRIPTION}
             />
             <meta property="og:image" content={HOME_OG_IMAGE_URL}/>
-            <meta property="og:title" content={HOME_OG_TITLE}/>
+            <meta property="og:title" content={pageTitle + " | " + HOME_OG_TITLE}/>
             <meta property="og:image:height" content="400"/>
             <meta property="og:image:width" content="700"/>
             <meta property="og:description" content={HOME_OG_DESCRIPTION}/>
@@ -38,11 +38,11 @@ export default function Meta() {
             <meta property="og:site_name" content={HOME_OG_TITLE}/>
             <meta property="og:locale" content="fr_FR"/>
             <meta property="og:url" content={HOME_OG_URL}/>
-            <title>Au petit ventre heureux</title>
+            <title>{pageTitle + " | " + HOME_OG_TITLE}</title>
             <meta name="twitter:card" content="summary_large_image"/>
             <meta property="twitter:domain" content="aupetitventreheureux.fr"/>
             <meta property="twitter:url" content={HOME_OG_URL}/>
-            <meta name="twitter:title" content={HOME_OG_TITLE}/>
+            <meta name="twitter:title" content={pageTitle + " | " + HOME_OG_TITLE}/>
             <meta name="twitter:description" content={HOME_OG_DESCRIPTION}/>
             <meta name="twitter:image" content={HOME_OG_IMAGE_URL}/>
         </Head>

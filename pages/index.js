@@ -7,10 +7,7 @@ import Image from "next/image";
 export default function Index() {
     return (
         <>
-            <Layout>
-                <Head>
-                    <title>Au Petit Ventre Heureux</title>
-                </Head>
+            <Layout pageTitle={"Accueil"}>
                 <Hero/>
                 <Presentation/>
                 <div className='mt7-ns mb4'>

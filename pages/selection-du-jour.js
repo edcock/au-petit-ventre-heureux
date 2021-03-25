@@ -35,7 +35,7 @@ export async function getServerSideProps() {
 
 export default function SelectionDuJour({data}) {
     return (
-        <Layout>
+        <Layout pageTitle={"Nos Menus du jours"}>
             <div className="dishes-container">
                 <div className="flex flex-row-ns flex-column flex-wrap items-start mv5">
                     {data?.allDailyDishes.map((dailyDish, index) => {

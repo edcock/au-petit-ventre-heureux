@@ -18,7 +18,7 @@ const Contact = () => {
         });
     }
     return (
-        <Layout>
+        <Layout pageTitle={"Contact"}>
             <section className="contact-hero-container">
                 <div className="contact-hero-title-container">
                     <h4 className="contact-hero-title">

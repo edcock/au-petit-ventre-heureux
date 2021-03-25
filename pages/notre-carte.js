@@ -1,14 +1,10 @@
 import Layout from "../components/layout";
-import Head from "next/head";
 import React from "react";
 import Image from "next/image";
 
 const NotreCarte = () => {
     return (
-        <Layout>
-            <Head>
-                <title>Au Petit Ventre Heureux</title>
-            </Head>
+        <Layout pageTitle={"Notre carte"}>
             <div className='menuContainer'>
                 <div className='flex flex-row-ns flex-column center-ns flex-grow-1'>
                     <div className="vertical-separator">

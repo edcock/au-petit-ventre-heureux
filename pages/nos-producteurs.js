@@ -27,7 +27,7 @@ export async function getServerSideProps() {
 
 export default function NosProducteurs({data}) {
     return (
-        <Layout>
+        <Layout pageTitle={"Nos Producteurs"}>
             <article className="producers-container">
                 {data?.allProducers.map((producer, index) => {
                     return (

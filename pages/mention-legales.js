@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 
 const MentionsLegales = () => {
-    return <Layout>
+    return <Layout pageTitle={"Mentions Légales"}>
         <h2>Mentions légales</h2>
         <dl className="lh-title pa4 mt0">
             <dt className="f6 b">Hébergement</dt>
